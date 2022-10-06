@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Type Page CSS styling*/
+
+.typeBody {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.mainDiv {
+    height: 60vh;
+    width: 90vh;
+    background-color: #FF652F;
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 20px black;
+}
+
+.textBox {
+    display: flex;
+    height: 30%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 12px;
+    color: #EDF5E1;
+    font-family: 'Courier Prime', monospace;
+    font-weight: 500;
+    text-shadow: 2px 2px black;
+}
+
+.buttonBox {
+    display: flex;
+    justify-content: space-around;
+}
+
+.catBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.catBox .catImg {
+    background-color: transparent;
+    margin-top: 20px;
+    height: 90px;
+    width: 120px;
+}
+
+.catLink {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.catBox .catLink .catBtn {
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+    color: #FF652F;
+    font-family: 'Courier Prime', monospace;
+    border:black solid 2px;
+    font-size: 15px;
+    box-shadow: 1px 1px 2px black;
+    transition: ease-in 0.3s;
+}
+
+.catBox .catBtn:hover {
+    color: white;
+    background-color: black;
+    border-color: white;
+}
+
+.dogBox {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+ .dogBox .dogImg {
+    background-color: transparent;
+    margin-top: 15px;
+    height: 100px;
+    width: 120px;
+}
+
+.dogLink {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.dogBox .dogBtn {
+    height: 30px;
+    border-radius: 10px;
+    background-color: black;
+    color: #EDF5E1;
+    font-family: 'Courier Prime', monospace;
+    border:#EDF5E1 solid 2px;
+    font-size: 15px;
+    box-shadow: 1px 1px 2px black;
+    transition: ease-in 0.3s;
+}
+
+.dogBox .dogBtn:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+/* Home Page Styling */
+
+.homeBody {
+    background-color: white;
+    display: flex; 
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 15vh;
+    height: 80vh;
+    width: 0vw; /*change to 15vw on btn click*/
+    background-color: #FF652F;
+    border-radius: 0px 0px 20px 0px;
+    position: fixed;
+    overflow-x: hidden;
+    box-shadow: 1px 1px 15px black;
+    transition: ease-in-out 0.8s;
+}
+
+nav a {
+    text-decoration: none;
+    color: #EDF5E1;
+    font-family: 'Courier Prime', monospace;
+    font-size: 20px;
+    transition: ease-in 0.2s;
+    display: block;
+}
+
+nav a:hover {
+    color: black;
+}
+
+
+
+#animalImg {
+    height: 13vh;
+    width: 10vw;
+    margin-right: 0vw;
+    margin-left: 7vw;
+    
+}
+
+.topMenu {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 15vh;
+    background-color: white;;
+    border-bottom: solid 5px black;
+    position: fixed;
+}
+
+.topMenu h1 {
+    font-family: 'Courier Prime', monospace;
+    font-size: 7vh;
+    text-shadow: 1px 1px black;
+    margin-left: 20vw;
+    color: #FF652F;
+}
+
+.topMenu .hBurger {
+    margin-left: 2vw;
+    height: 50px;
+    width: 50px;
+}
+
+.para1 {
+    background-image: url("background1.jpg");
+    height: 750px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+}
+
+.homeTextArea {
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+

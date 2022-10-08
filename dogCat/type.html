@@ -13,21 +13,19 @@
         </div>
         <div class="buttonBox">
             <div class="catBox">
-                <a class="catLink" href="home.html">
                 <button class="catBtn" onclick="changeAnimalImg('cat')">Cat</button>
-                    <img class="catImg" src="catImg.png" alt="">
-                </a>
+                    <img class="catImg" src="imgs/catImg.png" alt="">
             </div>
             <div class="dogBox">
-                <a class="dogLink" href="home.html">
                 <button class="dogBtn" onclick="changeAnimalImg('dog')">Dog</button>
-                <img class="dogImg" src="dogImg.png" alt="">
-                </a>
+                <img class="dogImg" src="imgs/dogImg.png" alt="">
             </div>
         </div>
         <div class="inputBox">
             <input type="text" name="Name" id="nameInput" placeholder="Please provide us with your name">
-            <button onclick="getUsername(nameInput.value)">Enter</button>
+            <a href="home.html">
+                <button onclick="getUsername(nameInput.value)">Enter</button>
+            </a>    
         </div>
     </div>
     <script src="functionality.js"></script>

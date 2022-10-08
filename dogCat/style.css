@@ -61,7 +61,7 @@
     text-decoration: none;
 }
 
-.catBox .catLink .catBtn {
+.catBox  .catBtn {
     height: 30px;
     border-radius: 10px;
     background-color: black;
@@ -79,6 +79,10 @@
     border-color: black;
 }
 
+.catBtn:focus {
+    background-color: red;
+}
+
 .dogBox {
     display: flex;
     flex-direction: column;
@@ -92,11 +96,6 @@
     width: 120px;
 }
 
-.dogLink {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-}
 
 .dogBox .dogBtn {
     height: 30px;
@@ -116,10 +115,15 @@
     border-color: black;
 }
 
+.dogBtn:focus {
+    background-color: red;
+}
+
 .inputBox {
+    align-items: center;
+    flex-direction: column;
     display: flex;
-    margin-top: 5vh;
-    margin-left: 10vw;
+    margin-top: 2vh;
 }
 
 .inputBox input {
@@ -133,9 +137,9 @@
 }
 
 .inputBox button {
-    margin-left: .5vw;
+    margin-top: 1.5vw;
     height: 30px;
-    width: 50px;
+    width: 5vw;
     border-radius: 5px;
     background-color: black;
     color: #EDF5E1;
@@ -162,7 +166,12 @@
     background-color: white;
     display: flex; 
     flex-direction: column;
-    cursor: url(catImg.png);
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.homeBody::-webkit-scrollbar {
+    display: none;
 }
 
 /*--------------------------------------------------------
@@ -174,9 +183,9 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
     margin-top: 15vh;
-    height: 80vh;
+    height: 100%;
     width: 0vw; /*change to 15vw on btn click*/
     background-color: rgb(30, 112, 150);
     border-radius: 0px 0px 20px 0px;
@@ -194,12 +203,13 @@ nav a {
     font-size: 20px;
     transition: ease-in 0.2s;
     display: block;
+    margin-top: 10vh;
 }
 
 nav a:hover {
     color: black;
+    border-bottom: black solid 2px;
 }
-
 
 
 #animalImg {
@@ -223,6 +233,7 @@ nav a:hover {
     background-color: white;
     border-bottom: solid 2px rgb(30, 112, 150);
     position: fixed;
+    z-index: 10;
 }
 
 .topMenu h1 {
@@ -238,6 +249,7 @@ nav a:hover {
     margin-left: 2vw;
     height: 50px;
     width: 50px;
+    cursor: pointer;
 }
 
 .topMenu .logo {
@@ -283,11 +295,15 @@ nav a:hover {
 ----------------------------------------------------------
 ----------------Main Body Styling- ----------------------*/
 
+/*=====================para1 Area=============================*/
+
 .para1 {
+    scroll-snap-align: start;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("background1.jpg");
+    background-image: url("imgs/background1.jpg");
     height: 100vh;
     width: 100%;
     background-attachment: fixed;
@@ -314,7 +330,13 @@ nav a:hover {
     font-family: 'Courier Prime', monospace;
     color: white;
     font-size: 1.5rem;
-    z-index: 10
+    z-index: 9
+}
+
+.para1 #para1TextBox span {
+    text-decoration-line: underline;
+    text-decoration-color: rgb(30, 112, 150);
+    
 }
 
 .para1 #para1TextBox button {
@@ -336,24 +358,488 @@ nav a:hover {
     background-color: white;;
 }
 
+
+
+
+
+/*=====================homeTextArea=============================*/
+
 .homeTextArea {
+    scroll-snap-align: start;
+    position: relative;
     width: 100%;
-    height: 60vh;
+    height: 70vh;
     background-color: white;
     display: flex;
     color: white;
     align-items: center;
     justify-content: center;
-    background-attachment: fixed;
 }
 
-.para2 {
+.slider{
+    position: relative;
+    background: rgb(30, 112, 150);
+    width: 50vw;
     height: 60vh;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px black;
+  }
+  
+  .slider .slide{
+    position: absolute;
     width: 100%;
-    background-image: url(para2.jpg);
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+  }
+  
+  .slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+  }
+  
+  .slider .slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .navigation{
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .slider:hover .navigation{
+    opacity: 2;
+  }
+  
+  .prev-btn, .next-btn{
+    z-index: 999;
+    font-size: 2em;
+    color: #222;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev-btn{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  
+  .next-btn{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  
+  .navigation-visibility{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigation-visibility .slide-icon{
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.5);
+    width: 20px;
+    height: 10px;
+    transform: translateY(-10px);/*-50*/
+    margin: 0 6px;
+    border-radius: 2px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+  
+  .navigation-visibility .slide-icon.active{
+    background: #4285F4;
+  }
+    
+
+/*=====================Para2 Area=============================*/
+
+.para2 {
+    scroll-snap-align: start;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    bottom: 90%;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("imgs/para2.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
 
+.para2 .cover2 {
+    position: absolute;
+    height:100%;
+    width:100%;
+    background-color: black;
+    background-attachment: fixed;
+    opacity: 0.4;
+}
 
+.para2 .testimonial {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: 70vh;
+    width: 40vw;
+    background: rgba(167, 197, 204, 0.4);
+    z-index: 1;
+    margin: 50px;
+    border-radius: 9px;
+    box-shadow: 10px 10px 20px black;
+    font-family: 'Courier Prime', monospace;
+}
+
+
+.para2 .testimonial  img {
+    margin-top: 10px;
+    height: 20vh;
+    width: 10vw;
+    border-radius: 50%;
+    box-shadow: 4px 4px 20px black;
+    opacity: 1;
+}
+
+.para2 .testimonial h1 {
+    margin-top: 1vh;
+    color: white;
+}
+
+
+
+.para2 .testimonial h3 {
+    opacity: 0.9;
+    margin: 3vh;
+}
+
+/*--------------------------------------------------------
+----------------------------------------------------------
+----------------------------------------------------------
+----------------Footer Styling---------------------------*/
+
+
+.footer {
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+    background-color: white;
+}
+
+/*=====================contactDetails=============================*/
+
+.footer .contact {
+    display: flex;
+    height:100%;
+    width: 33.3%;
+    background-color: white;
+}
+
+.footer .contact .contactIcon {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    width: 20%;
+}
+
+.footer .contact .contactIcon i {
+    color:rgb(30, 112, 150);
+    margin-top: 1.5vh;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.footer .contact .contactText {
+    height: 100%;
+    width: 50%;
+}
+
+.footer .contact .contactText h3 {
+    font-size: 12px;
+    margin-top: 2vh;
+    padding: 5px;
+    font-family: 'Courier Prime', monospace;
+}
+
+.footer .contact .contactText a {
+    text-decoration: underline;
+    color: black;
+}
+
+.footer .contact .contactText a:hover {
+    color:rgb(30, 112, 150);
+}
+
+/*=====================openHours=============================*/
+
+.footer .hours {
+    height:100%;
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: 'Courier Prime', monospace;
+    background-color: white;
+}
+
+.footer .hours h3 {
+    color: rgb(30, 112, 150);
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.footer .hours h4 {
+    padding: 2px;
+}
+
+/*=====================socialMedia=============================*/
+
+.footer .socials {
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height:100%;
+    width: 33.3%;
+    background-color: white;
+}
+
+.footer .socials i {
+    font-size: 30px;
+    padding: 40px;
+    color:rgb(30, 112, 150);
+}
+
+.footer .socials a {
+    text-decoration: none;
+}
+
+
+/*--------------------------------------------------------
+----------------------------------------------------------
+----------------------------------------------------------
+---------------------------------------------------------*/
+/*================Service Page Styling==================== */
+
+
+.serviceBody::-webkit-scrollbar {
+    display: none;
+} 
+
+/*=================topSection============================*/
+.serviceBox {
+    display: flex;
+    height: 60vh;
+    width: 100%;
+    background-color: rgb(30, 112, 150);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.innerServiceBox {
+    display: flex;
+    height: 60vh;
+    width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    height: 30vh;
+    width: 10vw;
+    background-color: white;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 3px;
+    align-items: center;
+
+}
+
+.service i {
+    font-size: 3em; 
+    margin-top: 2vh;
+    color:white;
+    background-color: rgb(30, 112, 150);
+    border-radius: 50%;
+    padding: 2vw;
+}
+
+.service h4 {
+    margin-top: 2.5vh;
+    font-size: 1em;
+    font-family: 'Courier Prime', monospace;
+}
+
+.service a {
+    text-decoration: none;
+    color: black;
+}
+
+.underlineGrow {
+    display: inline-block;
+    position: relative;
+}
+
+.underlineGrow::after {
+    content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underlineGrow:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+/*==============TextSection====================*/
+
+.serviceBox2 {
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+    background-color: white;
+    justify-content: center;
+    border-bottom: rgb(30, 112, 150) 2px solid;
+}
+
+.serviceBox2 h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4em;
+    text-decoration: underline;
+    text-decoration-color: rgb(30, 112, 150);
+}
+
+/*================== Health Check Section===================*/
+
+.healthChecks {
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px solid black;
+}
+
+.textArea {
+    height: 100%;
+    width: 60%;
+    background-color: white;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.textArea h2 {
+    font-family: 'Oswald', sans-serif;
+    text-decoration: underline;
+    text-decoration-color: rgb(30, 112, 150);
+    margin: 5vh;
+    font-size: 7vh;
+}
+
+.textArea h4 {
+    font-family: 'Courier Prime', monospace;
+    margin-left: 1.9vw;
+    margin-top: 2.5vh;
+    color:rgb(30, 112, 150);
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.imageArea {
+    display: flex;
+    height: 100%;
+    width: 40%;
+    background-color:white;
+    align-items: center;
+}
+
+.imageArea img {
+    width: 95%;
+    margin-left: 1vw;
+    border-radius: 5px;;
+}
+
+/*================== vaccination Check Section===================*/
+
+.vaccinations {
+    display: flex;
+    height: 60vh;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.vaccinations .imageArea {
+    background-color: rgb(30, 112, 150);
+}
+
+.vaccinations .imageArea img {
+    margin-bottom: 5vh;
+    width: 95%;
+    margin-left: 1.5vw;;
+}
+
+.vaccinations .textArea {
+    background-color: rgb(30, 112, 150);
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.vaccinations .textArea h2 {
+    font-family: 'Oswald', sans-serif;
+    text-decoration: underline;
+    text-decoration-color:white;
+    margin: 5vh;
+    font-size: 7vh;
+}
+
+.vaccinations .textArea h4 {
+    font-family: 'Courier Prime', monospace;
+    margin-left: 1.9vw;
+    margin-top: 2.5vh;
+    color:white;
+    font-size: 15px;
+    margin-right: 1.5vw;
+    line-height: 1.3;
+}
+
+.vaccinations .textArea ul {
+    margin-top: 5vh;
+    margin-left: 3vw;
+    color: white;
+    font-family: 'Courier Prime', monospace;
+    font-size: 15px;
+}
+
+/*================== dental Check Section===================*/
+.dental {
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    background-color: white;
+    border-bottom: 2px solid black;
+}
+
+.dental .imageArea img {
+    
+    width: 94%;
+    margin-left: 1.5vw;;
+}

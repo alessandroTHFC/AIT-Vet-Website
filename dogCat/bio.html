@@ -1,13 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://kit.fontawesome.com/5adeb8d2bc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet"> 
+    
+    
     <link rel="stylesheet" href="style.css">
     <script src="functionality.js"></script>
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Big Bobs Vet Clinic</title>
+
+    <title>ProHealth Vet</title>
 </head>
-<body>
+<body class="aboutBody" onload="setProfileImage()">
+
+
+    <div class="topMenu">
+        <img class="hBurger" src="imgs/hamburger.png" alt="" onclick="popOutMenu()">
+        <img class="logo" src="imgs/logo.png">
+        <h1> ProHealth Vet</h1>
+        <div class="topButtonBox">
+            <button>Sign Up</button>
+            <button>Log In</button>
+            
+        </div>
+        <h2 id="userAnimalPreference">User is Animal Lover</h2>
+        <img id="animalImg" src="" alt="">
+    </div>
+    <nav id="navID" onclick="closeMenu()">
+        <a href="home.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="bio.html">About Us</a>
+        <a href="location.html">Location</a>
+    </nav>
+
+
+
+    <div class="aboutUsMain">
+        <div class="aboutMain">
+
+        </div>
+        <img src="imgs/old.jfif" alt="">
+    </div>
+
+    <div class="teamMain">
+
+    </div>
+
+
+
     
+    <div class="footer">
+        <div class="contact">
+            <div class="contactIcon">
+                <i class="fas fa-phone"></i>
+                <i class="fas fa-envelope"></i>
+                <i class="fas fa-map-marker"></i>
+
+            </div>
+
+            <div class="contactText">
+                <a href="#"><h3> (08) 8269 2545</h3></a>
+                <a href="#"><h3> prohealthvet@hotmail.com</h3></a>
+                <h3> 742 Evergreen Tce, Springfield, 4023</h3>
+            </div>
+        </div>
+
+        <div class="hours">
+            <h3>Working Hours</h3>
+            <h4>Monday-Friday</h4>
+            <h4>Open from 8:30am-6pm</h4>
+            <h4>Holidays/Weekends from 9am-3pm</h4>
+
+        </div>
+
+        <div class="socials">
+            <a href="#">
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>

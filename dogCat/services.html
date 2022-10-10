@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <script src="https://kit.fontawesome.com/5adeb8d2bc.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet">    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet">   
     <script src="functionality.js"></script>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ProHealth Vet</title>
@@ -46,18 +46,22 @@
                     </a>
                 </div>
                 <div class="service">
-                    <i class="fas fa-briefcase-medical"></i>
-                    <h4 class="underlineGrow">Surgical</h4>
-                </div>
-                <div class="service">
                     <i class="fas fa-tooth"></i>
                     <a href="#dentalLink">
                         <h4 class="underlineGrow">Dental</h4>
                     </a>
                 </div>
                 <div class="service">
+                    <i class="fas fa-briefcase-medical"></i>
+                    <a href="#surgeryLink">
+                        <h4 class="underlineGrow">Surgical</h4>
+                    </a>
+                </div>
+                <div class="service">
                     <i class="fas fa-x-ray"></i>
-                    <h4 class="underlineGrow">Radiography</h4>
+                    <a href="#radioLink">
+                        <h4 class="underlineGrow">Radiography</h4>
+                    </a>
                 </div>
             </div>
         </div>
@@ -82,13 +86,13 @@
                 <img src="imgs/healthCheck.jpg" alt="">
             </div>
         </div>
-
-        <div class="vaccinations">
+        
+        <div id="vaccLink" class="vaccinations">
             <div class="imageArea">
                 <img src="imgs/vaccination.jpg" alt="">
             </div>
             <div class="textArea">
-                <h2 id="vaccLink">Vaccinations</h2>
+                <h2>Vaccinations</h2>
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam purus turpis, volutpat ac porttitor eleifend, 
                     gravida vitae turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad 
                     litora torquent per conubia nostra, per inceptos himenaeos. Aenean fermentum dui nec tristique condimentum. Pellentesque 
@@ -116,6 +120,65 @@
             </div>
             <div class="imageArea">
                 <img src="imgs/dental.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="surgical">
+            <div class="imageArea">
+                <img src="imgs/surgery.jpg" alt="">
+            </div>
+            <div class="textArea">
+                <h2 id="surgeryLink">Surgical</h2>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam purus turpis, volutpat ac porttitor eleifend, 
+                    gravida vitae turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad 
+                    litora torquent per conubia nostra, per inceptos himenaeos. Aenean fermentum dui nec tristique condimentum. Pellentesque 
+                    consectetur nisi ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </h4>
+                    <div class="listBox">
+                        <div class="ulBox">
+                            <h3>Desexing</h3>
+                            <ul>
+                                <li>Interdum et malesuada</li>
+                                <li>Donec mi lectus</li>
+                                <li>Sed ullamcorper</li>
+                            </ul>
+                        </div>
+                    
+                        <div class="ulBox">
+                            <h3>Soft Tissue</h3>
+                            <ul>
+                                <li>Interdum et malesuada</li>
+                                <li>Donec mi lectus</li>
+                                <li>Sed ullamcorper</li>
+                            </ul>
+                        </div>
+
+                        <div class="ulBox">
+                            <h3>Orthopaedic</h3>
+                            <ul>
+                                <li>Interdum et malesuada</li>
+                                <li>Donec mi lectus</li>
+                                <li>Sed ullamcorper</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+
+        <div class="radio">
+            <div class="textArea">
+                <h2 id="radioLink">Radiography</h2>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam purus turpis, volutpat ac porttitor eleifend, 
+                    gravida vitae turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad 
+                    litora torquent per conubia nostra, per inceptos himenaeos. Aenean fermentum dui nec tristique condimentum. Pellentesque 
+                    consectetur nisi ligula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+                    Suspendisse molestie dolor ac placerat vestibulum. Sed ullamcorper tempor nibh vitae pellentesque. Fusce cursus turpis sem</h4>
+                <h4>vulputate scelerisque mauris varius id. Nunc lobortis ornare velit, a malesuada quam. Cras rhoncus augue quis posuere tristique. Vivamus 
+                    consequat dui vitae ex pretium, vitae molestie turpis sollicitudin. Ut in risus at diam semper aliquam a in elit. Nulla justo velit, posuere ac congue sit amet,
+                     congue non purus. Donec mi lectus, suscipit ut lobortis ut, lacinia eget lorem. Mauris finibus felis urna, vitae laoreet ex scelerisque a.</h4>
+            </div>
+            <div class="imageArea">
+                <img src="imgs/radio.jpg" alt="">
             </div>
         </div>
 

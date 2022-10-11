@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.locationBody::-webkit-scrollbar {
+    display: none;
+}
+
+.headingBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 100vw;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: rgb(30, 112, 150);
+    font-size: 30px;
+}
+
+.mainLocation {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: row;
+    height: 65vh;
+    width: 100vw;
+    justify-content: start;
+}
+
+.mainLocation .mapDiv {
+    display: flex;
+    width: 40vw;
+    height: 60vh;
+    background-color: rgb(30, 112, 150);
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black;
+    margin-left: 2vw;
+}
+
+.mainLocation .mapDiv iframe {
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.mainLocation .contactBox {
+   height: 60vh;
+   width: 30vw;
+   display: flex;
+   flex-direction: column;
+}
+
+.mainLocation .contactBox h1 {
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: rgb(30, 112, 150);
+    margin-left: 3vw;
+}
+
+.mainLocation .contactBox h3 {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(30, 112, 150);
+    margin-left: 3vw;
+}
+
+#openingH {
+    margin-top: 7vh;
+}
+
+.socialBox {
+    height: 25vh;
+    width: 100%;
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.socialBox i {
+    font-size: 35px;
+    margin-left: 45px;
+    margin-top: 2vh;
+    color: rgb(30, 112, 150)
+}
+
+.socialBox a {
+    text-decoration: none;
+}
+ 
+.inputFormBox {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: rgb(30, 112, 150);
+}
+
+.feedback-input {
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border:2px solid rgb(30, 112, 150);
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width:100%;
+    box-sizing: border-box;
+}
+  
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+.submitBtn {
+    width: 100%;
+    height: 5vh;
+    background-color: rgb(30, 112, 150);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.submitBtn:hover {
+    background-color: white;
+    color: rgb(30, 112, 150);
+    border: 1px rgb(30, 112, 150) solid;
+}

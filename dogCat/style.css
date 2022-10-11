@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+:root{
+    --menu-height: 15vh;
+}
+
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: var(--menu-height);
 }
 
 /*Type Page CSS styling*/
@@ -232,6 +237,7 @@ nav {
     overflow-x: hidden;
     transition: ease-in-out 0.8s;
     z-index: 10;
+    top: 15vh;
 }
 
 nav a {
@@ -328,6 +334,40 @@ nav a:hover {
     font-family: 'Courier Prime', monospace;;
 }
 
+/*=====================PopUp Sign Up Area=============================*/
+/*
+.popUpContainer {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 19;
+  top: 0;
+  background: rgba(243, 235, 235, 0.682);
+  width: 30vw;
+  height: 80vh;
+  transform: translate(-120%, 20%);
+  border-radius: 15px;
+  border: none;
+  overflow: auto;
+  box-shadow: 10px 10px 20px black;
+  justify-content: center;
+}
+
+.popUpForm {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.popUpForm form {
+    display: flex;
+    flex-direction: column;
+}
+*/
+
 /*--------------------------------------------------------
 ----------------------------------------------------------
 ----------------------------------------------------------
@@ -346,12 +386,12 @@ nav a:hover {
     background-attachment: fixed;
     background-position: center;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .para1 .cover {
-    bottom: 0;
     position: absolute;
-    height:85%;
+    height:100%;
     width:100%;
     background-color: black;
     background-attachment: fixed;
@@ -359,14 +399,14 @@ nav a:hover {
 }
 
 .para1 #para1TextBox {
-    margin-top: 50vh;
+    margin-top: 20vh;
     height: 40vh;
     width: 50vw;
     background-color: transparent;
     text-align: center;
     font-family: 'Courier Prime', monospace;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     z-index: 9
 }
 
@@ -443,7 +483,7 @@ nav a:hover {
   }
   
   .navigation{
-    height: 320px;
+    height: 390px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -535,6 +575,11 @@ nav a:hover {
     font-family: 'Courier Prime', monospace;
     text-align: justify;
     text-justify: inter-word;
+    overflow: auto;
+}
+
+.para2 .testimonial::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -935,10 +980,10 @@ nav a:hover {
 .surgical .ulBox {
     overflow: auto;
     background-color: white;
-    width: 15vw;
-    height: 22vh;
+    width: 18vw;
     padding: 20px;
     border-radius: 3px;
+    margin-right: 2vw;
     box-shadow: 2px 2px 8px black;
 }
 
@@ -949,6 +994,7 @@ nav a:hover {
 }
 
 .surgical .listBox ul {
+    margin-left: 15px;
     margin-top: 1vh;
     color: white;
     font-family: 'Poppins', sans-serif;

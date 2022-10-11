@@ -1,0 +1,500 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.homeBody {
+    background-color: white;
+    display: flex; 
+    flex-direction: column;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.homeBody::-webkit-scrollbar {
+    display: none;
+}
+
+/*--------------------------------------------------------
+----------------------------------------------------------
+----------------------------------------------------------
+----------------PopOut Nav Styling----------------------*/
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    width: 0vw; /*change to 15vw on btn click*/
+    background-color: rgb(30, 112, 150);
+    border-radius: 0px 0px 20px 0px;
+    position: fixed;
+    overflow-x: hidden;
+    transition: ease-in-out 0.8s;
+    z-index: 10;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Courier Prime', monospace;
+    font-size: 20px;
+    transition: ease-in 0.2s;
+    display: block;
+    margin-top: 15vh;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: black;
+    border-bottom: black solid 2px;
+}
+
+
+#animalImg {
+    height: 15vh;
+    width: 8vw;
+    margin-left: 2vw;
+}
+/*--------------------------------------------------------
+----------------------------------------------------------
+----------------------------------------------------------
+----------------TopMenu Styling-------------------------*/
+.topMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 15vh;
+    background-color: white;
+    border-bottom: solid 2px rgb(30, 112, 150);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.topMenu h1 {
+    margin-top: 10px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 4vh;
+    text-shadow: 1px 1px white;
+    margin-left: .5vw;
+    color: black;
+}
+
+.topMenu .hBurger {
+    margin-left: 2vw;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.topMenu .logo {
+    height: 14vh;
+    width: 10vw;
+}
+
+.topMenu .topButtonBox {
+    display: flex;
+    height: 60px;
+    width: 30vw;
+    margin-left: 30vw;
+}
+
+.topMenu .topButtonBox button {
+    color: rgb(30, 112, 150);
+    font-size: 12px;
+    font-family: 'Courier Prime', monospace;
+    background-color: transparent;
+    border: solid 2px rgb(30, 112, 150);
+    border-radius: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 10px;
+    box-shadow: 1px 1px 3px black;
+    transition: ease-in 0.2s;
+}
+
+.topMenu .topButtonBox button:hover {
+    background-color: rgb(30, 112, 150);
+    color: white;
+    border: white;
+}
+
+#userAnimalPreference {
+    margin-left: 20px;
+    font-size: 15px;
+    font-family: 'Courier Prime', monospace;;
+}
+
+/*=====================PopUp Sign Up Area=============================*/
+
+.popUpForm {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 19;
+  top: 0;
+  background: white;
+  width: 30vw;
+  height: 80vh;
+  transform: translate(-120%, 20%);
+  border-radius: 15px;
+  border: none;
+  overflow: auto;
+  box-shadow: 10px 10px 20px black;
+  flex-direction: column;
+ 
+}
+
+
+/*--------------------------------------------------------
+----------------------------------------------------------
+----------------------------------------------------------
+----------------Main Body Styling- ----------------------*/
+
+/*=====================para1 Area=============================*/
+
+.para1 {
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("imgs/background1.jpg");
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.para1 .cover {
+    position: absolute;
+    height:100%;
+    width:100%;
+    background-color: black;
+    background-attachment: fixed;
+    opacity: 0.4;
+}
+
+.para1 #para1TextBox {
+    margin-top: 20vh;
+    height: 40vh;
+    width: 50vw;
+    background-color: transparent;
+    text-align: center;
+    font-family: 'Courier Prime', monospace;
+    color: white;
+    font-size: 2rem;
+    z-index: 9
+}
+
+.para1 #para1TextBox span {
+    text-decoration-line: underline;
+    text-decoration-color: rgb(30, 112, 150);
+    
+}
+
+.para1 #para1TextBox button {
+    color:white;
+    font-size: 12px;
+    font-family: 'Courier Prime', monospace;
+    background-color: rgb(30, 112, 150);
+    border: solid 2px white;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 1px 1px 3px rgb(30, 112, 150);
+    transition: ease-in 0.3s;
+}
+
+.para1 #para1TextBox button:hover {
+    border: rgb(30, 112, 150);
+    color:rgb(30, 112, 150);
+    background-color: white;;
+}
+
+
+
+
+
+/*=====================homeTextArea=============================*/
+
+.homeTextArea {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider{
+    position: relative;
+    background: rgb(30, 112, 150);
+    width: 50vw;
+    height: 60vh;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px black;
+  }
+  
+  .slider .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+  }
+  
+  .slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+  }
+  
+  .slider .slide img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .navigation{
+    height: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .slider:hover .navigation{
+    opacity: 2;
+  }
+  
+  .prev-btn, .next-btn{
+    z-index: 999;
+    font-size: 2em;
+    color: #222;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev-btn{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  
+  .next-btn{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  
+  .navigation-visibility{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigation-visibility .slide-icon{
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.5);
+    width: 20px;
+    height: 10px;
+    transform: translateY(-10px);/*-50*/
+    margin: 0 6px;
+    border-radius: 2px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+  
+  .navigation-visibility .slide-icon.active{
+    background: #4285F4;
+  }
+    
+
+/*=====================Para2 Area=============================*/
+
+.para2 {
+    scroll-snap-align: start;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    bottom: 90%;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("imgs/para2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.para2 .cover2 {
+    position: absolute;
+    height:100%;
+    width:100%;
+    background-color: black;
+    background-attachment: fixed;
+    opacity: 0.4;
+}
+
+.para2 .testimonial {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: 70vh;
+    width: 40vw;
+    background: rgba(167, 197, 204, 0.4);
+    z-index: 1;
+    margin: 50px;
+    border-radius: 9px;
+    box-shadow: 10px 10px 20px black;
+    font-family: 'Courier Prime', monospace;
+    text-align: justify;
+    text-justify: inter-word;
+    overflow: auto;
+}
+
+.para2 .testimonial::-webkit-scrollbar {
+    display: none;
+}
+
+
+.para2 .testimonial  img {
+    padding: 3px;
+    margin-top: 10px;
+    height: 20vh;
+    width: 10vw;
+    border-radius: 50%;
+    box-shadow: 4px 4px 20px black;
+    opacity: 1;
+}
+
+.para2 .testimonial h1 {
+    font-size: 35px;
+    margin-top: 4vh;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+}
+
+.para2 .testimonial h3 {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    opacity: 0.9;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 3vh;
+}
+
+/*--------------------------------------------------------
+----------------------------------------------------------
+----------------------------------------------------------
+----------------Footer Styling---------------------------*/
+
+
+.footer {
+    display: flex;
+    height: 20vh;
+    width: 100vw;
+    background-color: white;
+}
+
+/*=====================contactDetails=============================*/
+
+.footer .contact {
+    display: flex;
+    height:100%;
+    width: 33.3%;
+    background-color: white;
+}
+
+.footer .contact .contactIcon {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    width: 10vw;
+}
+
+.footer .contact .contactIcon i {
+    color:rgb(30, 112, 150);
+    margin-top: 1.5vh;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.footer .contact .contactText {
+    height: 100%;
+    width: 50%;
+}
+
+.footer .contact .contactText h3 {
+    font-size: 12px;
+    margin-top: 2vh;
+    padding: 5px;
+    font-family: 'Courier Prime', monospace;
+}
+
+.footer .contact .contactText a {
+    text-decoration: underline;
+    color: black;
+}
+
+.footer .contact .contactText a:hover {
+    color:rgb(30, 112, 150);
+}
+
+/*=====================openHours=============================*/
+
+.footer .hours {
+    height:100%;
+    width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-family: 'Courier Prime', monospace;
+    background-color: white;
+}
+
+.footer .hours h3 {
+    color: rgb(30, 112, 150);
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.footer .hours h4 {
+    padding: 2px;
+}
+
+/*=====================socialMedia=============================*/
+
+.footer .socials {
+    justify-content: center;
+    display:inline-block;
+    align-items: center;
+    height:100%;
+    width: 500px;
+}
+
+.footer .socials i {
+    font-size: 30px;
+    padding: 40px;
+    color:rgb(30, 112, 150);
+}
+
+.footer .socials a {
+    text-decoration: none;
+}

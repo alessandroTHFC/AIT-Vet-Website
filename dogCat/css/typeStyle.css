@@ -1,0 +1,189 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.typeBody {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.mainDiv {
+    height: 60vh;
+    width: 90vh;
+    background-color: rgb(30, 112, 150);
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 20px black;
+}
+
+.textBox {
+    display: flex;
+    height: 30%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 12px;
+    color: #EDF5E1;
+    font-family: 'Courier Prime', monospace;
+    font-weight: 500;
+    text-shadow: 2px 2px black;
+}
+
+.buttonBox {
+    display: flex;
+    justify-content: space-around;
+}
+
+.catBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.catBox .catImg {
+    background-color: transparent;
+    margin-top: 15px;
+    height: 100px;
+    width: 120px;
+}
+
+.catLink {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.catBox  .catBtn {
+    height: 30px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-family: 'Courier Prime', monospace;
+    border:white solid 2px;
+    font-size: 15px;
+    box-shadow: 1px 1px 2px black;
+    transition: ease-in 0.3s;
+}
+
+.catBox .catBtn:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+.catBtn:focus {
+    background-color: red;
+}
+
+.dogBox {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+ .dogBox .dogImg {
+    background-color: transparent;
+    margin-top: 15px;
+    height: 100px;
+    width: 120px;
+}
+
+
+.dogBox .dogBtn {
+    height: 30px;
+    border-radius: 10px;
+    background-color: black;
+    color: #EDF5E1;
+    font-family: 'Courier Prime', monospace;
+    border:#EDF5E1 solid 2px;
+    font-size: 15px;
+    box-shadow: 1px 1px 2px black;
+    transition: ease-in 0.3s;
+}
+
+.dogBox .dogBtn:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+.dogBtn:focus {
+    background-color: red;
+}
+
+.bothBox {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+ .bothBox .bothImg {
+    background-color: transparent;
+    margin-top: 15px;
+    height: 100px;
+    width: 120px;
+}
+
+
+.bothBox .bothBtn {
+    height: 30px;
+    border-radius: 10px;
+    background-color: black;
+    color: #EDF5E1;
+    font-family: 'Courier Prime', monospace;
+    border:#EDF5E1 solid 2px;
+    font-size: 15px;
+    box-shadow: 1px 1px 2px black;
+    transition: ease-in 0.3s;
+}
+
+.bothBox .bothBtn:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+.bothBtn:focus {
+    background-color: red;
+}
+
+.inputBox {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 2vh;
+}
+
+.inputBox input {
+    width: 18vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+.inputBox button {
+    margin-top: 1.5vw;
+    height: 30px;
+    width: 5vw;
+    border-radius: 5px;
+    background-color: black;
+    color: #EDF5E1;
+    font-family: 'Courier Prime', monospace;
+    border:#EDF5E1 solid 2px;
+    font-size: 10px;
+    box-shadow: 1px 1px 2px black;
+    transition: ease-in 0.3s;
+}

@@ -1,0 +1,131 @@
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    width: 0vw; /*change to 15vw on btn click*/
+    background-color: rgb(30, 112, 150);
+    border-radius: 0px 0px 20px 0px;
+    position: fixed;
+    overflow-x: hidden;
+    transition: ease-in-out 0.8s;
+    z-index: 10;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Courier Prime', monospace;
+    font-size: 20px;
+    transition: ease-in 0.2s;
+    display: block;
+    margin-top: 15vh;
+    letter-spacing: 2px;
+}
+
+nav a:hover {
+    color: black;
+    border-bottom: black solid 2px;
+}
+
+
+#animalImg {
+    height: 15vh;
+    width: 8vw;
+    margin-left: 2vw;
+}
+/*--------------------------------------------------------
+----------------------------------------------------------
+----------------------------------------------------------
+----------------TopMenu Styling-------------------------*/
+.topMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 15vh;
+    background-color: white;
+    border-bottom: solid 2px rgb(30, 112, 150);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.topMenu h1 {
+    margin-top: 10px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 4vh;
+    text-shadow: 1px 1px white;
+    margin-left: .5vw;
+    color: black;
+}
+
+.topMenu .hBurger {
+    margin-left: 2vw;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.topMenu .logo {
+    height: 14vh;
+    width: 10vw;
+}
+
+.topMenu .topButtonBox {
+    display: flex;
+    height: 60px;
+    width: 30vw;
+    margin-left: 30vw;
+}
+
+.topMenu .topButtonBox button {
+    color: rgb(30, 112, 150);
+    font-size: 12px;
+    font-family: 'Courier Prime', monospace;
+    background-color: transparent;
+    border: solid 2px rgb(30, 112, 150);
+    border-radius: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 10px;
+    box-shadow: 1px 1px 3px black;
+    transition: ease-in 0.2s;
+}
+
+.topMenu .topButtonBox button:hover {
+    background-color: rgb(30, 112, 150);
+    color: white;
+    border: white;
+}
+
+#userAnimalPreference {
+    margin-left: 20px;
+    font-size: 15px;
+    font-family: 'Courier Prime', monospace;;
+}
+
+/*=====================PopUp Sign Up Area=============================*/
+
+.popUpForm {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 19;
+  top: 0;
+  background: white;
+  width: 30vw;
+  height: 80vh;
+  transform: translate(-120%, 20%);
+  border-radius: 15px;
+  border: none;
+  overflow: auto;
+  box-shadow: 10px 10px 20px black;
+  flex-direction: column;
+ 
+}

@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.aboutBody::-webkit-scrollbar {
+    display: none;
+}
+
+.aboutUsMain {
+    display: flex;
+    height: 85vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: start;
+    border-bottom: rgb(30, 112, 150) 2px solid;
+}
+
+.aboutMain {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3.5vw;;
+    display: flex;
+    height: 70vh;
+    width: 60vw;
+    background-color: rgb(30, 112, 150);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px black;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.aboutMain h1 {
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: white;
+    margin-left: 20px;
+    letter-spacing: 1px;
+
+}
+
+.aboutMain h4 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 20px;
+    line-height: 2;
+    font-size: 15px
+}
+
+.aboutUsMain img {
+    height: 70vh;
+    width: 25vw;
+    margin-left: 6vw;
+    border-radius: 10px;
+}
+
+.MeetHeading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: rgb(30, 112, 150);
+    font-size: 25px;
+}
+
+.teamMain {
+    height: 150vh;
+    width: 80%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, .5fr);
+    grid-column-gap:12px;
+    grid-row-gap: 12px;
+    padding: 10px;
+    margin-left: 10vw;
+    text-align: center;
+}
+
+.gridCell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(230, 241, 246, 0.5);
+    border-radius: 10px;
+}
+
+.gridCell h2 {
+    font-family: 'Oswald', sans-serif;
+    color: rgb(30, 112, 150)
+}
+
+.gridCell h4 {
+    font-family: 'Oswald', sans-serif;
+    color: rgb(30, 112, 150);
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.5;
+}
+
+.gridCell .imageDiv  {
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#vet1 {
+    background-image:url(imgs/vet2.jpeg) ;
+}
+#vet2 {
+    background-image:url(imgs/vet1.jpeg) ;
+}
+#vet3 {
+    background-image:url(imgs/vet3.jpg) ;
+    background-position: 50% 5%;
+}
+
+
+#nurse1 {
+    background-image:url(imgs/nurse1.jpg) ;
+}
+#nurse2 {
+    background-image:url(imgs/nurse2.jpg) ;
+}
+#nurse3 {
+    background-image:url(imgs/nurse3.jpg) ;
+    background-position: 10% 20%;
+}
+
+#recep1 {
+    background-image:url(imgs/recep1.jpg) ;
+}
+#recep2 {
+    background-image:url(imgs/recep2.jpg) ;
+}
+#recep3 {
+    background-image:url(imgs/recep3.jpg) ;
+}

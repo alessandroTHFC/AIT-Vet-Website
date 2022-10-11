@@ -14,10 +14,19 @@ function setProfileImage() {
     if (preference == 'cat') {
         text.textContent = userName + " is a Cat Lover"
         image.src = "imgs/catImg.png";
+        image.style.height = "15vh";
+        image.style.width = "8vw"
     }
     else if (preference == 'dog'){
         text.textContent = userName + " is a Dog Lover"
         image.src = "imgs/dogImg.png";
+        image.style.height = "20vh";
+        image.style.width = "11vw";
+    }
+    else if (preference == 'both'){
+        text.textContent = userName + " Loves Both"
+        image.src = "imgs/bothImg.png";
+        image.style.width = "12vw";
     }
     setUsernameToSpan();
         

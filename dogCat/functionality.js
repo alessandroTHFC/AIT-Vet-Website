@@ -1,6 +1,7 @@
 preference = localStorage.getItem("animalPic")
 userName = localStorage.getItem("name");
 
+
 /* changeAnimalImg sets the value chosen(dog/cat) and stores it in local storage */
 function changeAnimalImg(value) {
     profPic = localStorage.setItem("animalPic", value);
@@ -142,3 +143,57 @@ slider.addEventListener("mouseover", () => {
 slider.addEventListener("mouseout", () => {
   repeater();
 });
+
+
+//Open Sign Up Form
+function openRegForm() {
+    document.getElementById("myForm").style.display = "flex";
+}
+
+//Close Sign Up Form
+function closeRegForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+
+function openLoginForm() {
+  document.getElementById("myLogin").style.display = "block";
+}
+
+function closeLoginForm() {
+  document.getElementById("myLogin").style.display = "none";
+}
+
+(function() {
+    var widget, initAddressFinder = function() {
+        widget = new AddressFinder.Widget(
+            document.getElementById('suburb'),
+            'ADDRESSFINDER_DEMO_KEY',
+            'AU', {
+                "show_addresses": false,
+                "show_locations": true,
+                "location_params": {
+                    "location_types": "locality"
+                }
+            }
+        );
+
+
+        widget.on('location:select', function(fullLocation, metaData) {
+            document.getElementById('suburb').value = metaData.full_location
+            document.getElementById('postcode').value = metaData.postcode;
+
+        });
+
+    };
+
+    function downloadAddressFinder() {
+        var script = document.createElement('script');
+        script.src = 'https://api.addressfinder.io/assets/v3/widget.js';
+        script.async = true;
+        script.onload = initAddressFinder;
+        document.body.appendChild(script);
+    };
+
+    document.addEventListener('DOMContentLoaded', downloadAddressFinder);
+})(); 
+

@@ -335,7 +335,11 @@ nav a:hover {
 }
 
 /*=====================PopUp Sign Up Area=============================*/
-/*
+
+.popUpForm form::-webkit-scrollbar {
+    display: none;
+}
+
 .popUpContainer {
   display: none;
   position: fixed;
@@ -344,29 +348,172 @@ nav a:hover {
   border: 3px solid #f1f1f1;
   z-index: 19;
   top: 0;
-  background: rgba(243, 235, 235, 0.682);
-  width: 30vw;
-  height: 80vh;
-  transform: translate(-120%, 20%);
+  background: white;
+  width: 500px;
   border-radius: 15px;
   border: none;
-  overflow: auto;
   box-shadow: 10px 10px 20px black;
   justify-content: center;
+  margin-right: 35vw;
+  margin-top: var(--menu-height);
+  margin-bottom: 3vh;
+}
+
+.popUpContainer i {
+    margin-top: 10px;;
+    margin-left: 10px;
+    color: rgb(30, 112, 150);
+    cursor: pointer;
 }
 
 .popUpForm {
-    height: 90%;
-    width: 90%;
-    display: flex;
     justify-content: center;
+    width: 100%;
+    display: flex;
+    margin-top: 1px;
+    overflow: auto;
+    font-family: 'Oswald', sans-serif;
+    color: rgb(30, 112, 150);
+}
+
+.popUpForm  h1{
+    margin-left: 5px;
 }
 
 .popUpForm form {
+    overflow: auto;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
-*/
+
+.left {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.right {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.popUpForm form label {
+    color: rgb(30, 112, 150);
+    margin-left: 5px;
+    font-family: 'Courier Prime', monospace;
+    margin-top: 5px;
+}
+
+.popUpForm form input {
+    height: 40px;
+    border: 2px solid rgb(30, 112, 150);
+    border-radius: 15px;
+    padding-left: 5px;
+    color: rgb(30, 112, 150);
+    font-family: 'Courier Prime', monospace;
+}
+
+
+#closeBtn {
+    background: rgb(30, 112, 150);
+    border: 2px solid rgb(30, 112, 150);
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+}
+
+::-webkit-file-upload-button {
+    background: rgb(30, 112, 150);
+    border: 2px solid rgb(30, 112, 150);
+    border-radius: 15px;
+    color: white;
+    padding: 2px 10px 2px 10px;
+  }
+
+#imageInput {
+    border: none;
+}
+
+
+.open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* The popup form - hidden by default */
+  .loginForm {
+    display: none;
+    position: fixed;
+
+    flex-direction: column;
+    top: 15vh;
+    right: 5px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+    color:rgb(30, 112, 150);
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+    width:100%;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    height: 40px;
+    border: 2px solid rgb(30, 112, 150);
+    border-radius: 15px;
+    padding-left: 5px;
+    color: rgb(30, 112, 150);
+    font-family: 'Courier Prime', monospace;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: rgb(30, 112, 150);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    border-radius: 15px;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: rgb(30, 112, 150);
+    border-radius: 15px;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
 
 /*--------------------------------------------------------
 ----------------------------------------------------------
@@ -608,6 +755,95 @@ nav a:hover {
     margin-left: 3vw;
     margin-right: 3vw;
     margin-top: 3vh;
+}
+
+/*--------------------------------------------------------
+----------------------------------------------------------
+----------------------------------------------------------
+----------------PuppyPlayDate Styling-------------------*/
+
+.puppyPlayDate {
+    display: flex;
+    height: 50vh;
+    width: 100vw;
+    background-color: white;
+}
+
+.playDateHeading{
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    color: rgb(30, 112, 150);
+    text-decoration: underline;
+    text-decoration-color: black;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2;
+}
+
+.playDateHeading h1 {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.puppyPlayDate .playDateText{
+    height: 100%;
+    width: 50%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.playDateText h3 {
+    margin: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(30, 112, 150);
+    line-height: 2;
+}
+
+.playDateText h3 span {
+    text-decoration: underline;
+    color: black;
+    text-decoration-color: rgb(30, 112, 150);
+}
+
+.puppyPlayDate .playDateText .playDateForm select {
+    height: 30px;
+    width: 120px;
+    margin-left: 15px;
+    border: 2px solid rgb(30, 112, 150);
+    border-radius: 5px;
+    color:rgb(30, 112, 150);
+    font-family: 'Poppins', sans-serif;
+}
+
+.puppyPlayDate .playDateText .playDateForm #playDateBtn {
+    background-color: rgb(30, 112, 150);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px;
+    transition: ease-in-out 0.2s
+}
+
+#playDateBtn:hover {
+    background-color: white;
+    color: rgb(30, 112, 150);
+    border: 2px solid rgb(30, 112, 150);
+}
+
+.puppyPlayDate .playDateImg{
+    height: 100%;
+    width: 50%;
+}
+
+.puppyPlayDate .playDateImg img {
+    height: 95%;
+    width: 70%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px black;
+    margin-left: 40px;
+    margin-bottom: 5px
 }
 
 /*--------------------------------------------------------

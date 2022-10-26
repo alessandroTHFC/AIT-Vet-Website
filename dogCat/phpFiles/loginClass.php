@@ -25,8 +25,10 @@ class Login
      */
     public function __construct()
     {
+
         // create/read session, absolutely necessary
         session_start();
+        echo "$_SESSION[user_login_status]";
 
         // check the possible login actions:
         // if user tried to log out (happen when user clicks logout button)
@@ -48,12 +50,13 @@ class Login
         $dbpassword = "";
         $dbname = "vetDataBase";
 
+
         // check login form contents
         if (empty($_POST['email'])) {
             $this->errors[] = "Username field was empty.";
-        } elseif (empty($_POST['pName'])) {
+        } elseif (empty($_POST['pWord'])) {
             $this->errors[] = "Password field was empty.";
-        } elseif (!empty($_POST['email']) && !empty($_POST['pName'])) {
+        } elseif (!empty($_POST['email']) && !empty($_POST['pWord'])) {
 
             // create a database connection, using the constants from config/db.php (which we loaded in index.php)
             $this->db_connection = new mysqli($host, $dbusername, $dbpassword, $dbname);
@@ -62,11 +65,11 @@ class Login
             if (!$this->db_connection->connect_errno) {
                 // escape the POST stuff
                 $email = $this->db_connection->real_escape_string($_POST['email']);
-                $bindEmail = $this->db_connection->real_escape_string($_POST['email']);
+                $password = $this->db_connection->real_escape_string($_POST['pWord']);
                 // database query, getting all the info of the selected user (allows login via email address in the
                 // username field)
                 ///create template
-                $sql = "SELECT Email FROM users WHERE Email = ?;";
+                $sql = "SELECT * FROM users WHERE Email = ?;";
                 $stmt = mysqli_stmt_init($this->db_connection);
                 if(!mysqli_stmt_prepare($stmt, $sql)) {
                     echo "SQL statement failed";
@@ -74,48 +77,27 @@ class Login
                 else {
                     mysqli_stmt_bind_param($stmt, "s", $email);
                     var_dump(mysqli_stmt_execute($stmt));
-                    mysqli_stmt_bind_result($stmt, $bindedEmail);
+                    $result = mysqli_stmt_get_result($stmt);
+                    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                    var_dump($row);
+                    
                 }
-                
-                while (mysqli_stmt_fetch($stmt)) {
-                    printf ("%s\n", $bindedEmail);
-                }
+                if(!password_verify($password, $row["Password"])) {
+                    echo "Password does not match";
+                    var_dump($password);
+                    var_dump($row["Password"]);
+                } else {
+                    $_SESSION['user_login_status'] = 1;
 
-                if($email == $bindedEmail) {
-                        $_SESSION['email'] = $bindedEmail;
-                        $_SESSION['user_login_status'] = 1;
+                    // TODO:*ADD other session variables that might be needed.
+
+                    echo "success";
                 }
             }
         }    
     }
-/*
-                if($result_of_login_check) {
-                    // Put your ifelse with num_rows here
-                    if ($result_of_login_check->num_rows > 0) {
 
-                        // get result row (as an object)
-                        $result_row = $result_of_login_check->fetch_object();
-                        echo "hello";
-    
-                            // write user data into PHP SESSION (a file on your server)
-                            $_SESSION['email'] = $result_row->user_email;
-                            $_SESSION['user_login_status'] = 1;
-                    } 
-                    else {
-                        $this->errors[] = "Wrong password. Try again.";
-                    }
-                }
-                else {
-                   $this->errors[] = $this->db_connection->error;
-                }
-                // if this user exists
-            } 
-            else {
-                $this->errors[] = "Database connection problem.";
-            }
-        }
-    }
-
+    //TODO: include logout function into a button
     public function doLogout()
     {
         // delete the session of the user
@@ -132,7 +114,7 @@ class Login
      */
     public function isUserLoggedIn()
     {
-        if (isset($_SESSION['user_login_status']) AND $_SESSION['user_login_status'] == 1) {
+        if ($_SESSION['user_login_status'] == 1) {
             return true;
         }
         // default return

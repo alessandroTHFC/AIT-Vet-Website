@@ -38,7 +38,7 @@
     <div class="popUpContainer" id="myForm">
       <i class="fas fa-times" onclick="closeRegForm()"></i>
       <div class="popUpForm">
-        <form action="registration.php" method="post" class="form-container">
+        <form action="phpFiles/registration.php" method="post" class="form-container">
           <h1>Sign Up</h1>
           <div class="left">
             <label for="fName"><b>First Name</b></label>
@@ -48,7 +48,7 @@
             <input type="text" placeholder="Enter Last Name" name="lName" required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Last Name" name="pWord" required>
+            <input type="password" placeholder="Enter Password" name="pWord" required>
         
             <label for="num"><b>Phone Number</b></label>
             <input type="number" placeholder="Enter Phone Number" name="num" required>
@@ -95,13 +95,13 @@
       -------------LOGIN FORM---------------->
 
     <div class="loginForm" id="myLogin">
-      <form action="login.php" class="form-container" method="post">
+      <form action="phpFiles/login.php" class="form-container" method="post">
         <h1>Login</h1>
         <label for="email"><b></b></label>
         <input type="text" placeholder="Enter Email" name="email" required>
     
         <label for="psw"><b></b></label>
-        <input type="text" placeholder="Enter Pet Name" name="pName" required>
+        <input type="password" placeholder="Enter Password" name="pWord" required>
     
         <button type="submit" class="btn">Login</button>
         <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>

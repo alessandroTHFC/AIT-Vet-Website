@@ -22,7 +22,7 @@ $login = new Login();
 if ($login->isUserLoggedIn() == true) {
     // the user is logged in. you can do whatever you want here.
     // for demonstration purposes, we simply show the "you are logged in" view.
-    include("logged_in.php");
+    //include("logged_in.php");
     echo "<script type = text/javascript>alert('Success'); </script>";
 
 } else {
@@ -31,5 +31,3 @@ if ($login->isUserLoggedIn() == true) {
     echo "<script type = text/javascript>alert('Failure'); </script>";
     include("not_logged_in.php");
 }
-
->?

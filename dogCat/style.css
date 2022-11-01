@@ -1,205 +1,197 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-:root{
-    --menu-height: 15vh;
+:root {
+  --menu-height: 15vh;
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: var(--menu-height);
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--menu-height);
 }
 
 /*Type Page CSS styling*/
 
 .typeBody {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    min-height: 100vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 100vh;
 }
 
 .mainDiv {
-    height: 60vh;
-    width: 90vh;
-    background-color: rgb(30, 112, 150);
-    margin: 10px;
-    border-radius: 50px;
-    box-shadow: 2px 2px 20px black;
+  height: 60vh;
+  width: 90vh;
+  background-color: rgb(30, 112, 150);
+  margin: 10px;
+  border-radius: 50px;
+  box-shadow: 2px 2px 20px black;
 }
 
 .textBox {
-    display: flex;
-    height: 30%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    
-    font-size: 12px;
-    color: #EDF5E1;
-    font-family: 'Courier Prime', monospace;
-    font-weight: 500;
-    text-shadow: 2px 2px black;
+  display: flex;
+  height: 30%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  color: #edf5e1;
+  font-family: "Courier Prime", monospace;
+  font-weight: 500;
+  text-shadow: 2px 2px black;
 }
 
 .buttonBox {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .catBox {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .catBox .catImg {
-    background-color: transparent;
-    margin-top: 15px;
-    height: 100px;
-    width: 120px;
+  background-color: transparent;
+  margin-top: 15px;
+  height: 100px;
+  width: 120px;
 }
 
 .catLink {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
 }
 
-.catBox  .catBtn {
-    height: 30px;
-    border-radius: 10px;
-    background-color: black;
-    color: white;
-    font-family: 'Courier Prime', monospace;
-    border:white solid 2px;
-    font-size: 15px;
-    box-shadow: 1px 1px 2px black;
-    transition: ease-in 0.3s;
+.catBox .catBtn {
+  height: 30px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-family: "Courier Prime", monospace;
+  border: white solid 2px;
+  font-size: 15px;
+  box-shadow: 1px 1px 2px black;
+  transition: ease-in 0.3s;
 }
 
 .catBox .catBtn:hover {
-    color: black;
-    background-color: white;
-    border-color: black;
+  color: black;
+  background-color: white;
+  border-color: black;
 }
 
 .catBtn:focus {
-    background-color: red;
+  background-color: red;
 }
 
 .dogBox {
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
 }
 
- .dogBox .dogImg {
-    background-color: transparent;
-    margin-top: 15px;
-    height: 100px;
-    width: 120px;
+.dogBox .dogImg {
+  background-color: transparent;
+  margin-top: 15px;
+  height: 100px;
+  width: 120px;
 }
-
 
 .dogBox .dogBtn {
-    height: 30px;
-    border-radius: 10px;
-    background-color: black;
-    color: #EDF5E1;
-    font-family: 'Courier Prime', monospace;
-    border:#EDF5E1 solid 2px;
-    font-size: 15px;
-    box-shadow: 1px 1px 2px black;
-    transition: ease-in 0.3s;
+  height: 30px;
+  border-radius: 10px;
+  background-color: black;
+  color: #edf5e1;
+  font-family: "Courier Prime", monospace;
+  border: #edf5e1 solid 2px;
+  font-size: 15px;
+  box-shadow: 1px 1px 2px black;
+  transition: ease-in 0.3s;
 }
 
 .dogBox .dogBtn:hover {
-    color: black;
-    background-color: white;
-    border-color: black;
+  color: black;
+  background-color: white;
+  border-color: black;
 }
 
 .dogBtn:focus {
-    background-color: red;
+  background-color: red;
 }
 
 .bothBox {
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
 }
 
- .bothBox .bothImg {
-    background-color: transparent;
-    margin-top: 15px;
-    height: 100px;
-    width: 120px;
+.bothBox .bothImg {
+  background-color: transparent;
+  margin-top: 15px;
+  height: 100px;
+  width: 120px;
 }
-
 
 .bothBox .bothBtn {
-    height: 30px;
-    border-radius: 10px;
-    background-color: black;
-    color: #EDF5E1;
-    font-family: 'Courier Prime', monospace;
-    border:#EDF5E1 solid 2px;
-    font-size: 15px;
-    box-shadow: 1px 1px 2px black;
-    transition: ease-in 0.3s;
+  height: 30px;
+  border-radius: 10px;
+  background-color: black;
+  color: #edf5e1;
+  font-family: "Courier Prime", monospace;
+  border: #edf5e1 solid 2px;
+  font-size: 15px;
+  box-shadow: 1px 1px 2px black;
+  transition: ease-in 0.3s;
 }
 
 .bothBox .bothBtn:hover {
-    color: black;
-    background-color: white;
-    border-color: black;
+  color: black;
+  background-color: white;
+  border-color: black;
 }
 
 .bothBtn:focus {
-    background-color: red;
+  background-color: red;
 }
 
 .inputBox {
-    align-items: center;
-    flex-direction: column;
-    display: flex;
-    margin-top: 2vh;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  margin-top: 2vh;
 }
 
 .inputBox input {
-    width: 18vw;
-    height: 5vh;
-    border-radius: 10px;
-    border: none;
-    text-align: center;
-    background-color: black;
-    color: white;
+  width: 18vw;
+  height: 5vh;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  background-color: black;
+  color: white;
 }
 
 .inputBox button {
-    margin-top: 1.5vw;
-    height: 30px;
-    width: 5vw;
-    border-radius: 5px;
-    background-color: black;
-    color: #EDF5E1;
-    font-family: 'Courier Prime', monospace;
-    border:#EDF5E1 solid 2px;
-    font-size: 10px;
-    box-shadow: 1px 1px 2px black;
-    transition: ease-in 0.3s;
+  margin-top: 1.5vw;
+  height: 30px;
+  width: 5vw;
+  border-radius: 5px;
+  background-color: black;
+  color: #edf5e1;
+  font-family: "Courier Prime", monospace;
+  border: #edf5e1 solid 2px;
+  font-size: 10px;
+  box-shadow: 1px 1px 2px black;
+  transition: ease-in 0.3s;
 }
-
-
-
-
-
-
 
 /*--------------------------------------------------------
 ----------------------------------------------------------
@@ -208,15 +200,15 @@ html {
 /*================ Home Page Styling==================== */
 
 .homeBody {
-    background-color: white;
-    display: flex; 
-    flex-direction: column;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
 .homeBody::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /*--------------------------------------------------------
@@ -225,119 +217,134 @@ html {
 ----------------PopOut Nav Styling----------------------*/
 
 nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    height: 100%;
-    width: 0vw; /*change to 15vw on btn click*/
-    background-color: rgb(30, 112, 150);
-    border-radius: 0px 0px 20px 0px;
-    position: fixed;
-    overflow-x: hidden;
-    transition: ease-in-out 0.8s;
-    z-index: 10;
-    top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+  width: 0vw; /*change to 15vw on btn click*/
+  background-color: rgb(30, 112, 150);
+  border-radius: 0px 0px 20px 0px;
+  position: fixed;
+  overflow-x: hidden;
+  transition: ease-in-out 0.8s;
+  z-index: 10;
+  top: 15vh;
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
-    font-family: 'Courier Prime', monospace;
-    font-size: 20px;
-    transition: ease-in 0.2s;
-    display: block;
-    margin-top: 15vh;
-    letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+  font-family: "Courier Prime", monospace;
+  font-size: 20px;
+  transition: ease-in 0.2s;
+  display: block;
+  margin-top: 15vh;
+  letter-spacing: 2px;
+}
+
+#loginName {
+  text-decoration: none;
+  color: black;
+  font-family: "Courier Prime", monospace;
+  font-size: 10px;
+  display: block;
+  margin-top: 10px;
+  letter-spacing: 2px;
 }
 
 nav a:hover {
-    color: black;
-    border-bottom: black solid 2px;
+  color: black;
+  border-bottom: black solid 2px;
 }
 
-
 #animalImg {
-    height: 15vh;
-    width: 8vw;
-    margin-left: 2vw;
+  height: 15vh;
+  width: 8vw;
+  margin-left: 2vw;
+  margin-bottom: 2px;
 }
 /*--------------------------------------------------------
 ----------------------------------------------------------
 ----------------------------------------------------------
 ----------------TopMenu Styling-------------------------*/
 .topMenu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 15vh;
-    background-color: white;
-    border-bottom: solid 2px rgb(30, 112, 150);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 15vh;
+  background-color: white;
+  border-bottom: solid 2px rgb(30, 112, 150);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .topMenu h1 {
-    margin-top: 10px;
-    font-family: 'Courier Prime', monospace;
-    font-size: 4vh;
-    text-shadow: 1px 1px white;
-    margin-left: .5vw;
-    color: black;
+  margin-top: 10px;
+  font-family: "Courier Prime", monospace;
+  font-size: 4vh;
+  text-shadow: 1px 1px white;
+  margin-left: 0.5vw;
+  color: black;
 }
 
 .topMenu .hBurger {
-    margin-left: 2vw;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
+  margin-left: 2vw;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
 }
 
 .topMenu .logo {
-    height: 14vh;
-    width: 10vw;
+  height: 14vh;
+  width: 10vw;
 }
 
 .topMenu .topButtonBox {
-    display: flex;
-    height: 60px;
-    width: 30vw;
-    margin-left: 30vw;
+  display: flex;
+  height: 60px;
+  width: 30vw;
+  margin-left: 30vw;
 }
 
 .topMenu .topButtonBox button {
-    color: rgb(30, 112, 150);
-    font-size: 12px;
-    font-family: 'Courier Prime', monospace;
-    background-color: transparent;
-    border: solid 2px rgb(30, 112, 150);
-    border-radius: 5px;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin: 10px;
-    box-shadow: 1px 1px 3px black;
-    transition: ease-in 0.2s;
+  color: rgb(30, 112, 150);
+  font-size: 12px;
+  font-family: "Courier Prime", monospace;
+  background-color: transparent;
+  border: solid 2px rgb(30, 112, 150);
+  border-radius: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 10px;
+  box-shadow: 1px 1px 3px black;
+  transition: ease-in 0.2s;
+}
+
+.topMenu .topButtonBox a button {
+  height: 40px;
+  width: 140px;
 }
 
 .topMenu .topButtonBox button:hover {
-    background-color: rgb(30, 112, 150);
-    color: white;
-    border: white;
+  background-color: rgb(30, 112, 150);
+  color: white;
+  border: white;
 }
 
 #userAnimalPreference {
-    margin-left: 20px;
-    font-size: 15px;
-    font-family: 'Courier Prime', monospace;;
+  margin-left: 20px;
+  font-size: 15px;
+  font-family: "Courier Prime", monospace;
 }
 
 /*=====================PopUp Sign Up Area=============================*/
 
 .popUpForm form::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .popUpContainer {
@@ -360,160 +367,161 @@ nav a:hover {
 }
 
 .popUpContainer i {
-    margin-top: 10px;;
-    margin-left: 10px;
-    color: rgb(30, 112, 150);
-    cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: rgb(30, 112, 150);
+  cursor: pointer;
 }
 
 .popUpForm {
-    justify-content: center;
-    width: 100%;
-    display: flex;
-    margin-top: 1px;
-    overflow: auto;
-    font-family: 'Oswald', sans-serif;
-    color: rgb(30, 112, 150);
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  margin-top: 1px;
+  overflow: auto;
+  font-family: "Oswald", sans-serif;
+  color: rgb(30, 112, 150);
 }
 
-.popUpForm  h1{
-    margin-left: 5px;
+.popUpForm h1 {
+  margin-left: 5px;
 }
 
 .popUpForm form {
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .left {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 
 .right {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
 
 .popUpForm form label {
-    color: rgb(30, 112, 150);
-    margin-left: 5px;
-    font-family: 'Courier Prime', monospace;
-    margin-top: 5px;
+  color: rgb(30, 112, 150);
+  margin-left: 5px;
+  font-family: "Courier Prime", monospace;
+  margin-top: 5px;
 }
 
 .popUpForm form input {
-    height: 40px;
-    border: 2px solid rgb(30, 112, 150);
-    border-radius: 15px;
-    padding-left: 5px;
-    color: rgb(30, 112, 150);
-    font-family: 'Courier Prime', monospace;
+  height: 40px;
+  border: 2px solid rgb(30, 112, 150);
+  border-radius: 15px;
+  padding-left: 5px;
+  color: rgb(30, 112, 150);
+  font-family: "Courier Prime", monospace;
 }
 
-
 #closeBtn {
-    background: rgb(30, 112, 150);
-    border: 2px solid rgb(30, 112, 150);
-    border-radius: 15px;
-    color: white;
-    padding: 10px;
+  background: rgb(30, 112, 150);
+  border: 2px solid rgb(30, 112, 150);
+  border-radius: 15px;
+  color: white;
+  padding: 10px;
 }
 
 ::-webkit-file-upload-button {
-    background: rgb(30, 112, 150);
-    border: 2px solid rgb(30, 112, 150);
-    border-radius: 15px;
-    color: white;
-    padding: 2px 10px 2px 10px;
-  }
-
-#imageInput {
-    border: none;
+  background: rgb(30, 112, 150);
+  border: 2px solid rgb(30, 112, 150);
+  border-radius: 15px;
+  color: white;
+  padding: 2px 10px 2px 10px;
 }
 
+#imageInput {
+  border: none;
+}
 
 .open-button {
-    background-color: #555;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
-  }
-  
-  /* The popup form - hidden by default */
-  .loginForm {
-    display: none;
-    position: fixed;
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
 
-    flex-direction: column;
-    top: 15vh;
-    right: 5px;
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Oswald', sans-serif;
-    color:rgb(30, 112, 150);
-  }
-  
-  /* Add styles to the form container */
-  .form-container {
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-  }
-  
-  /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=password] {
-    width:100%;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-    height: 40px;
-    border: 2px solid rgb(30, 112, 150);
-    border-radius: 15px;
-    padding-left: 5px;
-    color: rgb(30, 112, 150);
-    font-family: 'Courier Prime', monospace;
-  }
-  
-  /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-    outline: none;
-  }
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
-    background-color: rgb(30, 112, 150);
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    border-radius: 15px;
-  }
-  
-  /* Add a red background color to the cancel button */
-  .form-container .cancel {
-    background-color: rgb(30, 112, 150);
-    border-radius: 15px;
-  }
-  
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover, .open-button:hover {
-    opacity: 1;
-  }
+/* The popup form - hidden by default */
+.loginForm {
+  display: none;
+  position: fixed;
+
+  flex-direction: column;
+  top: 15vh;
+  right: 5px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+  color: rgb(30, 112, 150);
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  height: 40px;
+  border: 2px solid rgb(30, 112, 150);
+  border-radius: 15px;
+  padding-left: 5px;
+  color: rgb(30, 112, 150);
+  font-family: "Courier Prime", monospace;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: rgb(30, 112, 150);
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: rgb(30, 112, 150);
+  border-radius: 15px;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
 
 /*--------------------------------------------------------
 ----------------------------------------------------------
@@ -523,238 +531,232 @@ nav a:hover {
 /*=====================para1 Area=============================*/
 
 .para1 {
-    scroll-snap-align: start;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url("imgs/background1.jpg");
-    height: 100vh;
-    width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("imgs/background1.jpg");
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .para1 .cover {
-    position: absolute;
-    height:100%;
-    width:100%;
-    background-color: black;
-    background-attachment: fixed;
-    opacity: 0.4;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  background-attachment: fixed;
+  opacity: 0.4;
 }
 
 .para1 #para1TextBox {
-    margin-top: 20vh;
-    height: 40vh;
-    width: 50vw;
-    background-color: transparent;
-    text-align: center;
-    font-family: 'Courier Prime', monospace;
-    color: white;
-    font-size: 2rem;
-    z-index: 9
+  margin-top: 20vh;
+  height: 40vh;
+  width: 50vw;
+  background-color: transparent;
+  text-align: center;
+  font-family: "Courier Prime", monospace;
+  color: white;
+  font-size: 2rem;
+  z-index: 9;
 }
 
 .para1 #para1TextBox span {
-    text-decoration-line: underline;
-    text-decoration-color: rgb(30, 112, 150);
-    
+  text-decoration-line: underline;
+  text-decoration-color: rgb(30, 112, 150);
 }
 
 .para1 #para1TextBox button {
-    color:white;
-    font-size: 12px;
-    font-family: 'Courier Prime', monospace;
-    background-color: rgb(30, 112, 150);
-    border: solid 2px white;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px;
-    box-shadow: 1px 1px 3px rgb(30, 112, 150);
-    transition: ease-in 0.3s;
+  color: white;
+  font-size: 12px;
+  font-family: "Courier Prime", monospace;
+  background-color: rgb(30, 112, 150);
+  border: solid 2px white;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 1px 1px 3px rgb(30, 112, 150);
+  transition: ease-in 0.3s;
 }
 
 .para1 #para1TextBox button:hover {
-    border: rgb(30, 112, 150);
-    color:rgb(30, 112, 150);
-    background-color: white;;
+  border: rgb(30, 112, 150);
+  color: rgb(30, 112, 150);
+  background-color: white;
 }
-
-
-
-
 
 /*=====================homeTextArea=============================*/
 
 .homeTextArea {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    background-color: white;
-    display: flex;
-    color: white;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-color: white;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
 }
 
-.slider{
-    position: relative;
-    background: rgb(30, 112, 150);
-    width: 50vw;
-    height: 60vh;
-    margin: 20px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px black;
-  }
-  
-  .slider .slide{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    clip-path: circle(0% at 0 50%);
-  }
-  
-  .slider .slide.active{
-    clip-path: circle(150% at 0 50%);
-    transition: 2s;
-  }
-  
-  .slider .slide img{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  .navigation{
-    height: 390px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-  .slider:hover .navigation{
-    opacity: 2;
-  }
-  
-  .prev-btn, .next-btn{
-    z-index: 999;
-    font-size: 2em;
-    color: #222;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .prev-btn{
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-  }
-  
-  .next-btn{
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-  }
-  
-  .navigation-visibility{
-    display: flex;
-    justify-content: center;
-  }
-  
-  .navigation-visibility .slide-icon{
-    z-index: 1;
-    background: rgba(255, 255, 255, 0.5);
-    width: 20px;
-    height: 10px;
-    transform: translateY(-10px);/*-50*/
-    margin: 0 6px;
-    border-radius: 2px;
-    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
-  }
-  
-  .navigation-visibility .slide-icon.active{
-    background: #4285F4;
-  }
-    
+.slider {
+  position: relative;
+  background: rgb(30, 112, 150);
+  width: 50vw;
+  height: 60vh;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px black;
+}
+
+.slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+}
+
+.slider .slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.navigation {
+  height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider:hover .navigation {
+  opacity: 2;
+}
+
+.prev-btn,
+.next-btn {
+  z-index: 999;
+  font-size: 2em;
+  color: #222;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.next-btn {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.navigation-visibility {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-visibility .slide-icon {
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 10px;
+  transform: translateY(-10px); /*-50*/
+  margin: 0 6px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .slide-icon.active {
+  background: #4285f4;
+}
 
 /*=====================Para2 Area=============================*/
 
 .para2 {
-    scroll-snap-align: start;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    bottom: 90%;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-image: url("imgs/para2.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+  scroll-snap-align: start;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  bottom: 90%;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("imgs/para2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .para2 .cover2 {
-    position: absolute;
-    height:100%;
-    width:100%;
-    background-color: black;
-    background-attachment: fixed;
-    opacity: 0.4;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  background-attachment: fixed;
+  opacity: 0.4;
 }
 
 .para2 .testimonial {
-    align-items: center;
-    flex-direction: column;
-    display: flex;
-    height: 70vh;
-    width: 40vw;
-    background: rgba(167, 197, 204, 0.4);
-    z-index: 1;
-    margin: 50px;
-    border-radius: 9px;
-    box-shadow: 10px 10px 20px black;
-    font-family: 'Courier Prime', monospace;
-    text-align: justify;
-    text-justify: inter-word;
-    overflow: auto;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  height: 70vh;
+  width: 40vw;
+  background: rgba(167, 197, 204, 0.4);
+  z-index: 1;
+  margin: 50px;
+  border-radius: 9px;
+  box-shadow: 10px 10px 20px black;
+  font-family: "Courier Prime", monospace;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow: auto;
 }
 
 .para2 .testimonial::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-
-.para2 .testimonial  img {
-    padding: 3px;
-    margin-top: 10px;
-    height: 20vh;
-    width: 10vw;
-    border-radius: 50%;
-    box-shadow: 4px 4px 20px black;
-    opacity: 1;
+.para2 .testimonial img {
+  padding: 3px;
+  margin-top: 10px;
+  height: 20vh;
+  width: 10vw;
+  border-radius: 50%;
+  box-shadow: 4px 4px 20px black;
+  opacity: 1;
 }
 
 .para2 .testimonial h1 {
-    font-size: 35px;
-    margin-top: 4vh;
-    color: black;
-    font-family: 'Oswald', sans-serif;
+  font-size: 35px;
+  margin-top: 4vh;
+  color: black;
+  font-family: "Oswald", sans-serif;
 }
 
 .para2 .testimonial h3 {
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    opacity: 0.9;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    margin-top: 3vh;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  opacity: 0.9;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-top: 3vh;
 }
 
 /*--------------------------------------------------------
@@ -763,87 +765,87 @@ nav a:hover {
 ----------------PuppyPlayDate Styling-------------------*/
 
 .puppyPlayDate {
-    display: flex;
-    height: 50vh;
-    width: 100vw;
-    background-color: white;
+  display: flex;
+  height: 50vh;
+  width: 100vw;
+  background-color: white;
 }
 
-.playDateHeading{
-    display: flex;
-    width: 100vw;
-    height: 10vh;
-    color: rgb(30, 112, 150);
-    text-decoration: underline;
-    text-decoration-color: black;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 2;
+.playDateHeading {
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+  color: rgb(30, 112, 150);
+  text-decoration: underline;
+  text-decoration-color: black;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2;
 }
 
 .playDateHeading h1 {
-    margin-left: 15px;
-    margin-top: 15px;
+  margin-left: 15px;
+  margin-top: 15px;
 }
 
-.puppyPlayDate .playDateText{
-    height: 100%;
-    width: 50%;
-    text-align: justify;
-    text-justify: inter-word;
+.puppyPlayDate .playDateText {
+  height: 100%;
+  width: 50%;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .playDateText h3 {
-    margin: 15px;
-    font-family: 'Poppins', sans-serif;
-    color: rgb(30, 112, 150);
-    line-height: 2;
+  margin: 15px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(30, 112, 150);
+  line-height: 2;
 }
 
 .playDateText h3 span {
-    text-decoration: underline;
-    color: black;
-    text-decoration-color: rgb(30, 112, 150);
+  text-decoration: underline;
+  color: black;
+  text-decoration-color: rgb(30, 112, 150);
 }
 
 .puppyPlayDate .playDateText .playDateForm select {
-    height: 30px;
-    width: 120px;
-    margin-left: 15px;
-    border: 2px solid rgb(30, 112, 150);
-    border-radius: 5px;
-    color:rgb(30, 112, 150);
-    font-family: 'Poppins', sans-serif;
+  height: 30px;
+  width: 120px;
+  margin-left: 15px;
+  border: 2px solid rgb(30, 112, 150);
+  border-radius: 5px;
+  color: rgb(30, 112, 150);
+  font-family: "Poppins", sans-serif;
 }
 
 .puppyPlayDate .playDateText .playDateForm #playDateBtn {
-    background-color: rgb(30, 112, 150);
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    height: 30px;
-    padding: 5px;
-    transition: ease-in-out 0.2s
+  background-color: rgb(30, 112, 150);
+  font-family: "Poppins", sans-serif;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  padding: 5px;
+  transition: ease-in-out 0.2s;
 }
 
 #playDateBtn:hover {
-    background-color: white;
-    color: rgb(30, 112, 150);
-    border: 2px solid rgb(30, 112, 150);
+  background-color: white;
+  color: rgb(30, 112, 150);
+  border: 2px solid rgb(30, 112, 150);
 }
 
-.puppyPlayDate .playDateImg{
-    height: 100%;
-    width: 50%;
+.puppyPlayDate .playDateImg {
+  height: 100%;
+  width: 50%;
 }
 
 .puppyPlayDate .playDateImg img {
-    height: 95%;
-    width: 70%;
-    border-radius: 15px;
-    box-shadow: 2px 2px 10px black;
-    margin-left: 40px;
-    margin-bottom: 5px
+  height: 95%;
+  width: 70%;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px black;
+  margin-left: 40px;
+  margin-bottom: 5px;
 }
 
 /*--------------------------------------------------------
@@ -851,101 +853,99 @@ nav a:hover {
 ----------------------------------------------------------
 ----------------Footer Styling---------------------------*/
 
-
 .footer {
-    display: flex;
-    height: 20vh;
-    width: 100vw;
-    background-color: white;
+  display: flex;
+  height: 20vh;
+  width: 100vw;
+  background-color: white;
 }
 
 /*=====================contactDetails=============================*/
 
 .footer .contact {
-    display: flex;
-    height:100%;
-    width: 33.3%;
-    background-color: white;
+  display: flex;
+  height: 100%;
+  width: 33.3%;
+  background-color: white;
 }
 
 .footer .contact .contactIcon {
-    align-items: center;
-    flex-direction: column;
-    display: flex;
-    height: 100%;
-    width: 10vw;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  width: 10vw;
 }
 
 .footer .contact .contactIcon i {
-    color:rgb(30, 112, 150);
-    margin-top: 1.5vh;
-    padding: 5px;
-    font-size: 20px;
+  color: rgb(30, 112, 150);
+  margin-top: 1.5vh;
+  padding: 5px;
+  font-size: 20px;
 }
 
 .footer .contact .contactText {
-    height: 100%;
-    width: 50%;
+  height: 100%;
+  width: 50%;
 }
 
 .footer .contact .contactText h3 {
-    font-size: 12px;
-    margin-top: 2vh;
-    padding: 5px;
-    font-family: 'Courier Prime', monospace;
+  font-size: 12px;
+  margin-top: 2vh;
+  padding: 5px;
+  font-family: "Courier Prime", monospace;
 }
 
 .footer .contact .contactText a {
-    text-decoration: underline;
-    color: black;
+  text-decoration: underline;
+  color: black;
 }
 
 .footer .contact .contactText a:hover {
-    color:rgb(30, 112, 150);
+  color: rgb(30, 112, 150);
 }
 
 /*=====================openHours=============================*/
 
 .footer .hours {
-    height:100%;
-    width: 33.3%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    font-family: 'Courier Prime', monospace;
-    background-color: white;
+  height: 100%;
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: "Courier Prime", monospace;
+  background-color: white;
 }
 
 .footer .hours h3 {
-    color: rgb(30, 112, 150);
-    margin-bottom: 5px;
-    font-size: 20px;
+  color: rgb(30, 112, 150);
+  margin-bottom: 5px;
+  font-size: 20px;
 }
 
 .footer .hours h4 {
-    padding: 2px;
+  padding: 2px;
 }
 
 /*=====================socialMedia=============================*/
 
 .footer .socials {
-    justify-content: center;
-    display:inline-block;
-    align-items: center;
-    height:100%;
-    width: 500px;
+  justify-content: center;
+  display: inline-block;
+  align-items: center;
+  height: 100%;
+  width: 500px;
 }
 
 .footer .socials i {
-    font-size: 30px;
-    padding: 40px;
-    color:rgb(30, 112, 150);
+  font-size: 30px;
+  padding: 40px;
+  color: rgb(30, 112, 150);
 }
 
 .footer .socials a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
 
 /*--------------------------------------------------------
 ----------------------------------------------------------
@@ -953,69 +953,67 @@ nav a:hover {
 ---------------------------------------------------------*/
 /*================Service Page Styling==================== */
 
-
 .serviceBody::-webkit-scrollbar {
-    display: none;
-} 
+  display: none;
+}
 
 /*=================topSection============================*/
 .serviceBox {
-    display: flex;
-    height: 60vh;
-    width: 100%;
-    background-color: rgb(30, 112, 150);
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  height: 60vh;
+  width: 100%;
+  background-color: rgb(30, 112, 150);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .innerServiceBox {
-    display: flex;
-    height: 60vh;
-    width: 80%;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  height: 60vh;
+  width: 80%;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .service {
-    display: flex;
-    flex-direction: column;
-    height: 30vh;
-    width: 10vw;
-    background-color: white;
-    box-shadow: 5px 5px 10px black;
-    border-radius: 3px;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  width: 10vw;
+  background-color: white;
+  box-shadow: 5px 5px 10px black;
+  border-radius: 3px;
+  align-items: center;
 }
 
 .service i {
-    font-size: 3em; 
-    margin-top: 2vh;
-    color:white;
-    background-color: rgb(30, 112, 150);
-    border-radius: 50%;
-    padding: 2vw;
+  font-size: 3em;
+  margin-top: 2vh;
+  color: white;
+  background-color: rgb(30, 112, 150);
+  border-radius: 50%;
+  padding: 2vw;
 }
 
 .service h4 {
-    margin-top: 2.5vh;
-    font-size: 1em;
-    font-family: 'Courier Prime', monospace;
+  margin-top: 2.5vh;
+  font-size: 1em;
+  font-family: "Courier Prime", monospace;
 }
 
 .service a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .underlineGrow {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 .underlineGrow::after {
-    content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -1028,232 +1026,227 @@ nav a:hover {
 }
 
 .underlineGrow:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 /*==============TextSection====================*/
 
 .serviceBox2 {
-    display: flex;
-    height: 15vh;
-    width: 100vw;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-    border-bottom: rgb(30, 112, 150) 2px solid;
+  display: flex;
+  height: 15vh;
+  width: 100vw;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-bottom: rgb(30, 112, 150) 2px solid;
 }
 
 .serviceBox2 h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 4em;
-    text-decoration: underline;
-    text-decoration-color: rgb(30, 112, 150);
+  font-family: "Oswald", sans-serif;
+  font-size: 4em;
+  text-decoration: underline;
+  text-decoration-color: rgb(30, 112, 150);
 }
 
 /*================== Health Check Section===================*/
 
 .healthChecks {
-    display: flex;
-    height: 70vh;
-    width: 100%;
-    background-color: white;
-    border-bottom: 2px solid black;
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px solid black;
 }
 
 .textArea {
-    height: 100%;
-    width: 60%;
-    background-color: white;
-    text-align: justify;
-    text-justify: inter-word;
-    overflow: auto;
+  height: 100%;
+  width: 60%;
+  background-color: white;
+  text-align: justify;
+  text-justify: inter-word;
+  overflow: auto;
 }
 
 .textArea h2 {
-    font-family: 'Oswald', sans-serif;
-    text-decoration: underline;
-    text-decoration-color: rgb(30, 112, 150);
-    margin: 5vh;
-    font-size: 7vh;
+  font-family: "Oswald", sans-serif;
+  text-decoration: underline;
+  text-decoration-color: rgb(30, 112, 150);
+  margin: 5vh;
+  font-size: 7vh;
 }
 
 .textArea h4 {
-    font-family: 'Poppins', sans-serif;
-    margin-left: 1.9vw;
-    margin-top: 2.5vh;
-    color:rgb(30, 112, 150);
-    font-size: 15px;
-    line-height: 2;
+  font-family: "Poppins", sans-serif;
+  margin-left: 1.9vw;
+  margin-top: 2.5vh;
+  color: rgb(30, 112, 150);
+  font-size: 15px;
+  line-height: 2;
 }
 
 .imageArea {
-    display: flex;
-    height: 100%;
-    width: 40%;
-    background-color:white;
-    align-items: center;
+  display: flex;
+  height: 100%;
+  width: 40%;
+  background-color: white;
+  align-items: center;
 }
 
 .imageArea img {
-    width: 95%;
-    margin-left: 1vw;
-    border-radius: 5px;
-    box-shadow: 2px 2px 10px black;
+  width: 95%;
+  margin-left: 1vw;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px black;
 }
 
 /*================== vaccination Check Section===================*/
 
 .vaccinations {
-    display: flex;
-    height: 70vh;
-    width: 100%;
-    border-bottom: 2px solid black;
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  border-bottom: 2px solid black;
 }
 
 .vaccinations .imageArea {
-    background-color: rgb(30, 112, 150);
+  background-color: rgb(30, 112, 150);
 }
 
 .vaccinations .imageArea img {
-    margin-bottom: 5vh;
-    width: 95%;
-    margin-left: 1.5vw;;
+  margin-bottom: 5vh;
+  width: 95%;
+  margin-left: 1.5vw;
 }
 
 .vaccinations .textArea {
-    background-color: rgb(30, 112, 150);
-    text-align: justify;
-    text-justify: inter-word;
+  background-color: rgb(30, 112, 150);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .vaccinations .textArea h2 {
-    font-family: 'Oswald', sans-serif;
-    text-decoration: underline;
-    text-decoration-color:white;
-    margin: 5vh;
-    font-size: 7vh;
+  font-family: "Oswald", sans-serif;
+  text-decoration: underline;
+  text-decoration-color: white;
+  margin: 5vh;
+  font-size: 7vh;
 }
 
 .vaccinations .textArea h4 {
-    margin-left: 1.9vw;
-    margin-top: 2.5vh;
-    color:white;
-    font-size: 15px;
-    margin-right: 1.5vw;
+  margin-left: 1.9vw;
+  margin-top: 2.5vh;
+  color: white;
+  font-size: 15px;
+  margin-right: 1.5vw;
 }
 
 .vaccinations .textArea ul {
-    margin-top: 5vh;
-    margin-left: 3vw;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+  margin-top: 5vh;
+  margin-left: 3vw;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
 }
 
 /*================== dental Section===================*/
 .dental {
-    display: flex;
-    height: 70vh;
-    width: 100%;
-    background-color: white;
-    border-bottom: 2px solid black;
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px solid black;
 }
 
 .dental .imageArea img {
-    
-    width: 94%;
-    margin-left: 1.5vw;;
+  width: 94%;
+  margin-left: 1.5vw;
 }
-
 
 /*================== surgical Section===================*/
 .surgical {
-    display: flex;
-    height: 70vh;
-    width: 100%;
-    border-bottom: 2px solid black;
-    background-color: rgb(30, 112, 150);
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  border-bottom: 2px solid black;
+  background-color: rgb(30, 112, 150);
 }
 
 .surgical .imageArea {
-    background-color: rgb(30, 112, 150);
+  background-color: rgb(30, 112, 150);
 }
 
 .surgical .textArea {
-    background-color: rgb(30, 112, 150);
-    text-align: justify;
-    text-justify: inter-word;
+  background-color: rgb(30, 112, 150);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .surgical .textArea h2 {
-    font-family: 'Oswald', sans-serif;
-    text-decoration: underline;
-    text-decoration-color:white;
-    margin: 5vh;
-    font-size: 7vh;
+  font-family: "Oswald", sans-serif;
+  text-decoration: underline;
+  text-decoration-color: white;
+  margin: 5vh;
+  font-size: 7vh;
 }
 
 .surgical .textArea h4 {
-    margin-left: 1.9vw;
-    margin-top: 2.5vh;
-    color:white;
-    font-size: 15px;
-    margin-right: 1.5vw;
+  margin-left: 1.9vw;
+  margin-top: 2.5vh;
+  color: white;
+  font-size: 15px;
+  margin-right: 1.5vw;
 }
 
 .surgical .listBox {
-    overflow: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 50vw;
-    height: 40%;
-    margin-left: 3vw;
+  overflow: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50vw;
+  height: 40%;
+  margin-left: 3vw;
 }
 
 .surgical .ulBox {
-    overflow: auto;
-    background-color: white;
-    width: 18vw;
-    padding: 20px;
-    border-radius: 3px;
-    margin-right: 2vw;
-    box-shadow: 2px 2px 8px black;
+  overflow: auto;
+  background-color: white;
+  width: 18vw;
+  padding: 20px;
+  border-radius: 3px;
+  margin-right: 2vw;
+  box-shadow: 2px 2px 8px black;
 }
 
 .surgical .listBox h3 {
-    font-family: 'Oswald', sans-serif;
-    text-decoration: underline;
-    text-decoration-color: rgb(30, 112, 150);
+  font-family: "Oswald", sans-serif;
+  text-decoration: underline;
+  text-decoration-color: rgb(30, 112, 150);
 }
 
 .surgical .listBox ul {
-    margin-left: 15px;
-    margin-top: 1vh;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    color: rgb(30, 112, 150);
+  margin-left: 15px;
+  margin-top: 1vh;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: rgb(30, 112, 150);
 }
-
 
 /*================== radiography Section===================*/
 
 .radio {
-    display: flex;
-    height: 70vh;
-    width: 100%;
-    background-color: white;
-    border-bottom: 2px solid black;
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px solid black;
 }
 
 .radio .imageArea img {
-    width: 94%;
-    margin-left: 1.5vw;;
+  width: 94%;
+  margin-left: 1.5vw;
 }
-
 
 /*--------------------------------------------------------
 ----------------------------------------------------------
@@ -1262,147 +1255,145 @@ nav a:hover {
 /*================About Page Styling==================== */
 
 .aboutBody::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .aboutUsMain {
-    display: flex;
-    height: 85vh;
-    width: 100vw;
-    align-items: center;
-    justify-content: start;
-    border-bottom: rgb(30, 112, 150) 2px solid;
+  display: flex;
+  height: 85vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: start;
+  border-bottom: rgb(30, 112, 150) 2px solid;
 }
 
 .aboutMain {
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    margin-left: 3.5vw;;
-    display: flex;
-    height: 70vh;
-    width: 60vw;
-    background-color: rgb(30, 112, 150);
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px black;
-    text-align: justify;
-    text-justify: inter-word;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.5vw;
+  display: flex;
+  height: 70vh;
+  width: 60vw;
+  background-color: rgb(30, 112, 150);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px black;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .aboutMain h1 {
-    font-size: 50px;
-    font-family: 'Oswald', sans-serif;
-    color: black;
-    text-decoration: underline;
-    text-decoration-color: white;
-    margin-left: 20px;
-    letter-spacing: 1px;
-
+  font-size: 50px;
+  font-family: "Oswald", sans-serif;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: white;
+  margin-left: 20px;
+  letter-spacing: 1px;
 }
 
 .aboutMain h4 {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    margin: 20px;
-    line-height: 2;
-    font-size: 15px
+  font-family: "Poppins", sans-serif;
+  color: white;
+  margin: 20px;
+  line-height: 2;
+  font-size: 15px;
 }
 
 .aboutUsMain img {
-    height: 70vh;
-    width: 25vw;
-    margin-left: 6vw;
-    border-radius: 10px;
+  height: 70vh;
+  width: 25vw;
+  margin-left: 6vw;
+  border-radius: 10px;
 }
 
 .MeetHeading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Oswald', sans-serif;
-    color: black;
-    text-decoration: underline;
-    text-decoration-color: rgb(30, 112, 150);
-    font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: rgb(30, 112, 150);
+  font-size: 25px;
 }
 
 .teamMain {
-    height: 150vh;
-    width: 80%;
-    background-color: white;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, .5fr);
-    grid-column-gap:12px;
-    grid-row-gap: 12px;
-    padding: 10px;
-    margin-left: 10vw;
-    text-align: center;
+  height: 150vh;
+  width: 80%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 0.5fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+  padding: 10px;
+  margin-left: 10vw;
+  text-align: center;
 }
 
 .gridCell {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    height: 100%;
-    width: 100%;
-    background-color:rgba(230, 241, 246, 0.5);
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(230, 241, 246, 0.5);
+  border-radius: 10px;
 }
 
 .gridCell h2 {
-    font-family: 'Oswald', sans-serif;
-    color: rgb(30, 112, 150)
+  font-family: "Oswald", sans-serif;
+  color: rgb(30, 112, 150);
 }
 
 .gridCell h4 {
-    font-family: 'Oswald', sans-serif;
-    color: rgb(30, 112, 150);
-    font-family: 'Poppins', sans-serif;
-    opacity: 0.5;
+  font-family: "Oswald", sans-serif;
+  color: rgb(30, 112, 150);
+  font-family: "Poppins", sans-serif;
+  opacity: 0.5;
 }
 
-.gridCell .imageDiv  {
-    margin-top: 20px;
-    height: 200px;
-    width: 200px;
-    background-position: center;
-    background-size: cover;
-    border-radius: 50%;
+.gridCell .imageDiv {
+  margin-top: 20px;
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
 }
 
 #vet1 {
-    background-image:url(imgs/vet2.jpeg) ;
+  background-image: url(imgs/vet2.jpeg);
 }
 #vet2 {
-    background-image:url(imgs/vet1.jpeg) ;
+  background-image: url(imgs/vet1.jpeg);
 }
 #vet3 {
-    background-image:url(imgs/vet3.jpg) ;
-    background-position: 50% 5%;
+  background-image: url(imgs/vet3.jpg);
+  background-position: 50% 5%;
 }
-
 
 #nurse1 {
-    background-image:url(imgs/nurse1.jpg) ;
+  background-image: url(imgs/nurse1.jpg);
 }
 #nurse2 {
-    background-image:url(imgs/nurse2.jpg) ;
+  background-image: url(imgs/nurse2.jpg);
 }
 #nurse3 {
-    background-image:url(imgs/nurse3.jpg) ;
-    background-position: 10% 20%;
+  background-image: url(imgs/nurse3.jpg);
+  background-position: 10% 20%;
 }
 
 #recep1 {
-    background-image:url(imgs/recep1.jpg) ;
+  background-image: url(imgs/recep1.jpg);
 }
 #recep2 {
-    background-image:url(imgs/recep2.jpg) ;
+  background-image: url(imgs/recep2.jpg);
 }
 #recep3 {
-    background-image:url(imgs/recep3.jpg) ;
+  background-image: url(imgs/recep3.jpg);
 }
 
 /*-------------------------------------------------------
@@ -1412,144 +1403,143 @@ nav a:hover {
 /*================Location Page Styling==================== */
 
 .locationBody::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .headingBox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 10vh;
-    width: 100vw;
-    font-family: 'Oswald', sans-serif;
-    color: black;
-    text-decoration: underline;
-    text-decoration-color: rgb(30, 112, 150);
-    font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  width: 100vw;
+  font-family: "Oswald", sans-serif;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: rgb(30, 112, 150);
+  font-size: 30px;
 }
 
 .mainLocation {
-    margin-top: 2vw;
-    display: flex;
-    flex-direction: row;
-    height: 65vh;
-    width: 100vw;
-    justify-content: start;
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: row;
+  height: 65vh;
+  width: 100vw;
+  justify-content: start;
 }
 
 .mainLocation .mapDiv {
-    display: flex;
-    width: 40vw;
-    height: 60vh;
-    background-color: rgb(30, 112, 150);
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px black;
-    margin-left: 2vw;
+  display: flex;
+  width: 40vw;
+  height: 60vh;
+  background-color: rgb(30, 112, 150);
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px black;
+  margin-left: 2vw;
 }
 
 .mainLocation .mapDiv iframe {
-    width: 100%;
-    height: 100%;
-    border: 1px solid white;
-    border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 20px;
 }
 
 .mainLocation .contactBox {
-   height: 60vh;
-   width: 30vw;
-   display: flex;
-   flex-direction: column;
+  height: 60vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .mainLocation .contactBox h1 {
-    font-family: 'Oswald', sans-serif;
-    color: black;
-    text-decoration: underline;
-    text-decoration-color: rgb(30, 112, 150);
-    margin-left: 3vw;
+  font-family: "Oswald", sans-serif;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: rgb(30, 112, 150);
+  margin-left: 3vw;
 }
 
 .mainLocation .contactBox h3 {
-    font-family: 'Poppins', sans-serif;
-    color: rgb(30, 112, 150);
-    margin-left: 3vw;
+  font-family: "Poppins", sans-serif;
+  color: rgb(30, 112, 150);
+  margin-left: 3vw;
 }
 
 #openingH {
-    margin-top: 7vh;
+  margin-top: 7vh;
 }
 
 .socialBox {
-    height: 25vh;
-    width: 100%;
-    margin-top: 1vh;
-    display: flex;
-    flex-direction: column;
+  height: 25vh;
+  width: 100%;
+  margin-top: 1vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .socialBox i {
-    font-size: 35px;
-    margin-left: 45px;
-    margin-top: 2vh;
-    color: rgb(30, 112, 150)
+  font-size: 35px;
+  margin-left: 45px;
+  margin-top: 2vh;
+  color: rgb(30, 112, 150);
 }
 
 .socialBox a {
-    text-decoration: none;
+  text-decoration: none;
 }
- 
+
 .inputFormBox {
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Oswald', sans-serif;
-    color: black;
-    text-decoration: underline;
-    text-decoration-color: rgb(30, 112, 150);
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: rgb(30, 112, 150);
 }
 
 .feedback-input {
-    color:white;
-    font-family: 'Poppins', sans-serif;
-    font-weight:500;
-    font-size: 18px;
-    border-radius: 5px;
-    line-height: 22px;
-    background-color: transparent;
-    border:2px solid rgb(30, 112, 150);
-    transition: all 0.3s;
-    padding: 13px;
-    margin-bottom: 15px;
-    width:100%;
-    box-sizing: border-box;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border: 2px solid rgb(30, 112, 150);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
-  
+
 textarea {
-    height: 150px;
-    line-height: 150%;
-    resize:vertical;
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
 }
 
 .submitBtn {
-    width: 100%;
-    height: 5vh;
-    background-color: rgb(30, 112, 150);
-    color: white;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: ease-in-out 0.2s;
-    font-family: 'Poppins', sans-serif;
+  width: 100%;
+  height: 5vh;
+  background-color: rgb(30, 112, 150);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  font-family: "Poppins", sans-serif;
 }
 
 .submitBtn:hover {
-    background-color: white;
-    color: rgb(30, 112, 150);
-    border: 1px rgb(30, 112, 150) solid;
+  background-color: white;
+  color: rgb(30, 112, 150);
+  border: 1px rgb(30, 112, 150) solid;
 }
-

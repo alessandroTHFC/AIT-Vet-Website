@@ -8,7 +8,8 @@ function changeAnimalImg(value) {
 
 /*setProfileImage gets text Element in top menu and image next to it, storing them in variables text & image. if 
 preference is equal to dog or cat will change the text and image to either a dog or cat respectively*/
-function setProfileImage() {
+function setProfileImage(loginStatus) {
+  console.log(loginStatus);
   text = document.getElementById("userAnimalPreference");
   image = document.getElementById("animalImg");
   if (preference == "cat") {

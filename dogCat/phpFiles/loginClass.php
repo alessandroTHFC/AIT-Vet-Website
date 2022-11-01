@@ -28,7 +28,6 @@ class Login
 
         // create/read session, absolutely necessary
         session_start();
-        echo "$_SESSION[user_login_status]";
 
         // check the possible login actions:
         // if user tried to log out (happen when user clicks logout button)
@@ -84,14 +83,16 @@ class Login
                 }
                 if(!password_verify($password, $row["Password"])) {
                     echo "Password does not match";
-                    var_dump($password);
-                    var_dump($row["Password"]);
+
                 } else {
                     $_SESSION['user_login_status'] = 1;
+                    $_SESSION['name'] = $row["First_Name"];
+                    $_SESSION['animalType'] = $row["Pet_Breed"];
 
                     // TODO:*ADD other session variables that might be needed.
 
                     echo "success";
+                    header("Location: http://localhost/dogCat/home.php#animalImg");
                 }
             }
         }    

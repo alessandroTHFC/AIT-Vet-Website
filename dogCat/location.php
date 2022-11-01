@@ -3,22 +3,17 @@
 <head>
     <script src="https://kit.fontawesome.com/5adeb8d2bc.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="style.css">
+    <script src="functionality.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet">    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ProHealth Vet</title>
 </head>
-
-<body class="homeBody" onload="setProfileImage()">
-  <?php session_start(); ?> 
-
-      <!--------------------------------------------
-      ---------------------------------------------
-      ----------------------------------------------
-      ----------------------------------------------
-      -------------Top Menu----------------------->
-    <div class="topMenu">
+<body class="locationBody" onload="setProfileImage()">
+<?php session_start(); ?> 
+    
+<div class="topMenu">
         <img class="hBurger" src="imgs/hamburger.png" alt="" onclick="popOutMenu()">
         <img class="logo" src="imgs/logo.png">
         <h1> ProHealth Vet</h1>
@@ -140,133 +135,51 @@
         <a href="location.php">Location</a>
     </nav>
 
-      <!----------------------------------------------
-      ---------------------------------------------
-      ----------------------------------------------
-      ----------------------------------------------
-      -------------Top Parallax Div------------------>
 
-    <div class="para1">
-        <div class="cover"></div>
 
-        <div id="para1TextBox">
-            <h2>G'day <span id="clientName"> User</span> welcome to ProHealth Vet</h2>
-            <button>Call Us</button>
-            <button>Book Appointment</button>
-            </div>
+    <div class="headingBox">
+        <h1>Our Location</h1>
     </div>
 
-    <!----------------------------------------------
-      ---------------------------------------------
-      ----------------------------------------------
-      ----------------------------------------------
-      -------------Middle Section Slider------------>
-
-    <div class="homeTextArea">
-        
-        <div class="slider">
-            <div class="slide active">
-              <img id="pic1" src="caroImgs/img1.jpg" alt="">
-            </div>
-            <div class="slide">
-              <img id="pic2" src="caroImgs/img2.jpg" alt="">
-            </div>
-            <div class="slide">
-              <img id="pic3" src="caroImgs/img3.jpg" alt="">
-            </div>
-            <div class="slide">
-              <img id="pic4" src="caroImgs/img4.jpg" alt="">
-            </div>
-            <div class="navigation">
-              <i class="fas fa-chevron-left prev-btn" ></i>
-              <i class="fas fa-chevron-right next-btn"></i>
-            </div>
-            <div class="navigation-visibility">
-              <div class="slide-icon active"></div>
-              <div class="slide-icon"></div>
-              <div class="slide-icon"></div>
-              <div class="slide-icon"></div>
-            </div>
-          </div>
-
-    </div>
-
-        <!----------------------------------------------
-      ---------------------------------------------
-      ----------------------------------------------
-      ----------------------------------------------
-      -------------Bottom Section Testimonials----------------------->
-
-    <div class="para2">
-       <div class="cover2"></div>
-          
-        <div class="testimonial">
-            <img src="imgs/catSmoking.jpg.crdownload" alt="">
-            <h1>John</h1>
-            <div class="testTextBox">
-            <h3>As a pack a day smoker my lungs arent the best, after a few herbal remedies and excercise plans I'm fitter than ever.</h3>
-             <h3> I wouldn't be where I am today without the team at ProHealth.</h3>
-            </div>
+    <div class="mainLocation">
+        <div class="mapDiv">
+            <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=adelaide+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            </iframe>
         </div>
-
-        <div class="testimonial">
-          <img src="imgs/dogHat.jpg" alt="">
-          <h1>Michelle</h1>
-          <div class="testTextBox">
-          <h3>I always had a cold head, thanks to ProHealth and the beanie they gave me I'm constantly warm.</h3>
-          <h3>Special thanks to Dr Phil who reccomended it.</h3>
-          </div>
+        <div class="contactBox" >
+            <h1>Address</h1>
+            <h3>752 Evergreen Tce, Springfield 4023</h3>
+            <h1 id="openingH">Opening Hours</h1>
+            <h3>Monday-Friday</h3>
+            <h3>8:30am to 6pm</h3>
+            <h3>Holidays/Weekends from 9am-3pm</h3>
         </div>
-
-        <div class="testimonial">
-          <img src="imgs/alpacca.jpg" alt="">
-            <h1>Alfonso</h1>
-            <div class="testTextBox">
-              <h3>I constantly had diarrhea because of my high fibre diet, because of ProHealth and their dieticians I'm regular but solid</h3>
-              <h3>I can't reccomend these guys enough, thanks ProHealth.</h3>
+        <div class="contactBox">
+            <h1>Phone Number</h1>
+            <h3> (08) 8269 2545</h3>
+            <h1>Email</h1>
+            <h3> prohealthvet@hotmail.com</h3>
+            <div class="socialBox">
+                <h1>Contact Us Via The Socials</h1>
+                <a href="#">
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-linkedin"></i>
+                </a>
             </div>
+
         </div>
     </div>
-
-
-          
-<!----------------------------------------------
----------------------------------------------
-----------------------------------------------
-----------------------------------------------
--------------PuppyPlayDates----------------------->
-
-    <div class="playDateHeading">
-      <h1>ProHealth Puppy Play Dates</h1>
+    <div class="inputFormBox">
+        <h1>Contact Us Directly</h1>
+        <form>      
+            <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+            <input name="email" type="text" class="feedback-input" placeholder="Email" />
+            <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+            <input class="submitBtn" type="submit" value="SUBMIT"/>
+          </form>
     </div>
-
-   <div class="puppyPlayDate">
-
-      <div class="playDateText">
-        <h3>ProHealth Offers its members the ability to organise play dates, <span> doggystyle! </span></h3>
-        <h3>Search for other dogs of either the same Breed, Gender or Locality.</h3>
-
-        <form id="pDateForm" class="playDateForm" action="playdate.php" method="post">
-          <select name="type">
-            <option value="gender">Gender</option>
-            <option value="breed">Breed</option>
-            <option value="suburb">Suburb</option>
-          </select>
-          <input id="playDateBtn" type="submit" value="submit"/>
-        </form>
-      </div>
-
-      <div class="playDateImg">
-        <img src="imgs/playdate.jpg" alt="">
-      </div>
-
-    </div>
-
-        <!----------------------------------------------
-      ---------------------------------------------
-      ----------------------------------------------
-      ----------------------------------------------
-      -------------Footer----------------------->
 
     <div class="footer">
         <div class="contact">
@@ -302,7 +215,5 @@
 
     </div>
 
-
-    <script src="functionality.js"></script>
 </body>
 </html>

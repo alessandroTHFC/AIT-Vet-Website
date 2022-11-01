@@ -11,78 +11,130 @@
     <title>ProHealth Vet</title>
 </head>
 <body class="serviceBody" onload="setProfileImage()">
-        <div class="topMenu">
-            <img class="hBurger" src="imgs/hamburger.png" alt="" onclick="popOutMenu()">
-            <img class="logo" src="imgs/logo.png">
-            <h1> ProHealth Vet</h1>
-            <div class="topButtonBox">
-                <button onclick="openForm()">Sign Up</button>
-                <button>Log In</button>
-                
-            </div>
-            <h2 id="userAnimalPreference">User is Animal Lover</h2>
-            <img id="animalImg" src="" alt="">
-        </div>
-        <nav id="navID" onclick="closeMenu()">
-            <a href="home.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="bio.html">About Us</a>
-            <a href="location.html">Location</a>
-        </nav>
+<?php session_start(); ?> 
 
-        <!----------------------------------------------
+<div class="topMenu">
+        <img class="hBurger" src="imgs/hamburger.png" alt="" onclick="popOutMenu()">
+        <img class="logo" src="imgs/logo.png">
+        <h1> ProHealth Vet</h1>
+        
+        <div class="topButtonBox">
+            <?php if(isset($_SESSION['user_login_status']) == 1) {
+              
+              echo '<a href="phpFiles/logout.php"><button id="logoutBtn">Log Out</button></a>';
+            } else {
+              echo '<button onclick="openLoginForm()">Log In</button>';
+              echo '<button onclick="openRegForm()">Sign Up</button>';
+            } ?>
+        </div>
+
+          <h2 id="userAnimalPreference">
+            <?php 
+              if(isset($_SESSION['name'])) {
+                echo $_SESSION['name'] . " is logged in: " . $_SESSION['animalType'] . " Lover";
+              } else {
+                echo "User is an Animal Lover";
+              } ?> 
+          </h2>
+
+          <img id="animalImg" src="" alt="">
+        </div>
+    <!----------------------------------------------
       ---------------------------------------------
       ----------------------------------------------
       ----------------------------------------------
       -------------SIGN UP FORM----------------------->
     <div class="popUpContainer" id="myForm">
-        <i class="fas fa-times" onclick="closeForm()"></i>
-        <div class="popUpForm">
-          <form action="registration.php" class="form-container">
-            <h1>Sign Up</h1>
-            <div class="left">
-              <label for="fName"><b>First Name</b></label>
-              <input type="text" placeholder="Enter First Name" name="fName" required>
-          
-              <label for="lName"><b>Last Name</b></label>
-              <input type="text" placeholder="Enter Last Name" name="lName" required>
-          
-              <label for="num"><b>Phone Number</b></label>
-              <input type="number" placeholder="Enter Phone Number" name="num" required>
-    
-              <label for="email"><b>Email Address</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
-    
-              <label for="suburb"><b>Suburb</b></label>
-              <input type="text" placeholder="Enter Suburb" name="suburb" required>
-            </div>
-  
-            <div class="right">
-  
-              <label for="pName"><b>Pet Name</b></label>
-              <input type="text" placeholder="Enter Pets Name" name="pName" required>
-    
-              <label for="pBreed"><b>Pet Breed</b></label>
-              <input type="text" placeholder="Enter Pet Breed" name="pBreed" required>
-    
-              <label for="pAge"><b>Last Name</b></label>
-              <input type="text" placeholder="Enter Pets Age" name="pAge" required>
-    
-              <label for="pGender"><b>Last Name</b></label>
-              <input type="text" placeholder="Enter Pets Gender" name="pGender" required>
-    
-              <label for="pImage"><b>Pet Photo</b></label>
-              <input id="imageInput" type="file" placeholder="Upload Pet Photo" name="pImage required">
-    
-  
-            </div>
-  
-            <button type="button" id="closeBtn" onclick="closeForm()">Sign Up</button>
-            
-          </form>
-        </div>
-      </div>
+      <i class="fas fa-times" onclick="closeRegForm()"></i>
+      <div class="popUpForm">
+        <form action="phpFiles/registration.php" method="post" class="form-container">
+          <h1>Sign Up</h1>
+          <div class="left">
+            <label for="fName"><b>First Name</b></label>
+            <input type="text" placeholder="Enter First Name" name="fName" required>
         
+            <label for="lName"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" name="lName" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="pWord" required>
+        
+            <label for="num"><b>Phone Number</b></label>
+            <input type="number" placeholder="Enter Phone Number" name="num" required>
+  
+            <label for="email"><b>Email Address</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required>
+  
+            <label for="suburb"><b>Suburb</b></label>
+            <input id="suburb" type="text" placeholder="Enter Suburb" name="suburb" required>
+
+            <label for="pCode"><b>Post Code</b></label>
+            <input id="postcode" type="number" placeholder="Enter Suburb" name="postCode" required>
+          </div>
+
+          <div class="right">
+
+            <label for="pName"><b>Pet Name</b></label>
+            <input type="text" placeholder="Enter Pets Name" name="pName" required>
+  
+            <label for="pBreed"><b>Pet Breed</b></label>
+            <input type="text" placeholder="Enter Pet Breed" name="pBreed" required>
+  
+            <label for="pAge"><b>Pets Age</b></label>
+            <input type="number" placeholder="Enter Pets Age" name="pAge" required>
+  
+            <label for="pGender"><b>Pets Gender</b></label>
+            <input type="text" placeholder="Enter Pets Gender" name="pGender" required>
+  
+            <label for="pImage"><b>Pet Photo</b></label>
+            <input id="imageInput" type="file" placeholder="Upload Pet Photo" name="pPic">
+  
+
+          </div>
+          <button type="submit" id="closeBtn" onclick="closeRegForm()">Sign Up</button>
+          
+        </form>
+      </div>
+    </div>
+
+        <!----------------------------------------------
+      ---------------------------------------------
+      ----------------------------------------------
+      ----------------------------------------------
+      -------------LOGIN FORM---------------->
+
+    <div class="loginForm" id="myLogin">
+      <form action="phpFiles/login.php" class="form-container" method="post">
+        <h1>Login</h1>
+        <label for="email"><b></b></label>
+        <input type="text" placeholder="Enter Email" name="email" required>
+    
+        <label for="psw"><b></b></label>
+        <input type="password" placeholder="Enter Password" name="pWord" required>
+    
+        <button type="submit" class="btn">Login</button>
+        <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
+      </form>
+    </div>
+
+
+    <!----------------------------------------------
+      ---------------------------------------------
+      ----------------------------------------------
+      ----------------------------------------------
+      -------------Side Navigation----------------->
+    <!---change font? also change styling underline to match service boxes-->
+    <nav id="navID" onclick="closeMenu()">
+            <?php if(isset($_SESSION['user_login_status']) == 1) {
+             echo "<h2 id='loginName'>" . $_SESSION['name'] . " is logged in </h2>"; 
+            } 
+            ?>
+        <a href="home.php">Home</a>
+        <a href="services.php">Services</a>
+        <a href="bio.php">About Us</a>
+        <a href="location.php">Location</a>
+    </nav>
+
 
         <div class="serviceBox">
             <div class="innerServiceBox">

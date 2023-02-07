@@ -12,6 +12,7 @@ function setProfileImage(loginStatus) {
   console.log(loginStatus);
   text = document.getElementById("userAnimalPreference");
   image = document.getElementById("animalImg");
+
   if (preference == "cat") {
     text.textContent = userName + " is a Cat Lover";
     image.src = "imgs/catImg.png";
@@ -154,6 +155,13 @@ function openLoginForm() {
 
 function closeLoginForm() {
   document.getElementById("myLogin").style.display = "none";
+}
+
+function openDTPicker() {
+  document.getElementById("dtPicker").style.display = "flex";
+}
+function closeDTPicker() {
+  document.getElementById("dtPicker").style.display = "none";
 }
 
 (function () {

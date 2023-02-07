@@ -11,7 +11,9 @@
 </head>
 
 <body class="homeBody" onload="setProfileImage()">
-  <?php session_start(); ?> 
+  <?php session_start(); 
+   
+  ?> 
 
       <!--------------------------------------------
       ---------------------------------------------
@@ -43,6 +45,8 @@
           </h2>
 
           <img id="animalImg" src="" alt="">
+              
+          </img>
         </div>
     <!----------------------------------------------
       ---------------------------------------------
@@ -132,6 +136,7 @@
     <nav id="navID" onclick="closeMenu()">
             <?php if(isset($_SESSION['user_login_status']) == 1) {
              echo "<h2 id='loginName'>" . $_SESSION['name'] . " is logged in </h2>"; 
+             echo "<a href='pdate.php'>Playdates</a>";
             } 
             ?>
         <a href="home.php">Home</a>
@@ -228,39 +233,6 @@
         </div>
     </div>
 
-
-          
-<!----------------------------------------------
----------------------------------------------
-----------------------------------------------
-----------------------------------------------
--------------PuppyPlayDates----------------------->
-
-    <div class="playDateHeading">
-      <h1>ProHealth Puppy Play Dates</h1>
-    </div>
-
-   <div class="puppyPlayDate">
-
-      <div class="playDateText">
-        <h3>ProHealth Offers its members the ability to organise play dates, <span> doggystyle! </span></h3>
-        <h3>Search for other dogs of either the same Breed, Gender or Locality.</h3>
-
-        <form id="pDateForm" class="playDateForm" action="playdate.php" method="post">
-          <select name="type">
-            <option value="gender">Gender</option>
-            <option value="breed">Breed</option>
-            <option value="suburb">Suburb</option>
-          </select>
-          <input id="playDateBtn" type="submit" value="submit"/>
-        </form>
-      </div>
-
-      <div class="playDateImg">
-        <img src="imgs/playdate.jpg" alt="">
-      </div>
-
-    </div>
 
         <!----------------------------------------------
       ---------------------------------------------

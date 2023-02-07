@@ -78,21 +78,28 @@ class Login
                     var_dump(mysqli_stmt_execute($stmt));
                     $result = mysqli_stmt_get_result($stmt);
                     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                    var_dump($row);
+                    // var_dump($row); uncommenting this will print the details of the row retrieved
                     
                 }
                 if(!password_verify($password, $row["Password"])) {
-                    echo "Password does not match";
+                    echo '<script type="text/javascript">alert("Incorrect e-mail or password. Please try again or create an account");
+	                        location.href= "http://localhost/dogCat/home.php#animalImg";
+	                    </script>';
 
                 } else {
                     $_SESSION['user_login_status'] = 1;
                     $_SESSION['name'] = $row["First_Name"];
                     $_SESSION['animalType'] = $row["Pet_Breed"];
-
+                    $_SESSION['animalGender'] = $row["Pet_Gender"];
+                    $_SESSION['animalAge'] = $row["Pet_Age"];
+                    $_SESSION['animalName'] = $row["Pet_Name"];
+                    $_SESSION['phone'] = $row["PhoneNumber"];
+                    $animalType = $_SESSION['animalType'];
+                    echo "<script> localStorage.setItem('animalPic', '<?php echo $animalType;?>');</script>";
                     // TODO:*ADD other session variables that might be needed.
 
                     echo "success";
-                    header("Location: http://localhost/dogCat/home.php#animalImg");
+                    header("Location: http://localhost/dogCat/home.php");
                 }
             }
         }    
